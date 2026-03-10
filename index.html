@@ -7,123 +7,257 @@
   <meta name="description" content="GlideNova is a studio building simple, beautiful mobile apps for iPhone and iPad.">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --bg: #070C18;
-      --surface: #0D1525;
-      --text: #fff;
-      --muted: rgba(255,255,255,0.45);
+      --bg: #05080F;
+      --surface: #0C1220;
+      --border: rgba(255,255,255,0.07);
       --accent: #4A90D9;
-      --border: rgba(255,255,255,0.08);
-      --radius: 16px;
+      --muted: rgba(255,255,255,0.42);
+      --radius: 20px;
     }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      background: var(--bg); color: var(--text);
+      background: var(--bg);
+      color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
+    /* ── Glow ──────────────────────────────────────────────── */
+    .bg-glow {
+      position: fixed; top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 600px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(74,144,217,0.12) 0%, transparent 65%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── Nav ───────────────────────────────────────────────── */
     nav {
-      max-width: 800px; margin: 0 auto;
-      padding: 24px 24px 0;
-      display: flex; align-items: center;
+      position: relative; z-index: 10;
+      max-width: 900px; margin: 0 auto;
+      padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between;
     }
     .brand {
-      font-size: 18px; font-weight: 800; color: #fff;
-      letter-spacing: -0.01em;
+      font-size: 17px; font-weight: 800;
+      letter-spacing: -0.02em; color: #fff;
     }
-    .brand span { color: var(--accent); }
+    .brand em {
+      font-style: normal;
+      background: linear-gradient(135deg, #4A90D9, #7BB8F0);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-tagline {
+      font-size: 12px; color: var(--muted);
+      display: none;
+    }
+    @media (min-width: 600px) { .nav-tagline { display: block; } }
 
+    /* ── Hero ──────────────────────────────────────────────── */
     .hero {
-      max-width: 800px; margin: 0 auto;
-      padding: 80px 24px 60px;
-      text-align: center;
+      position: relative; z-index: 1;
+      max-width: 900px; margin: 0 auto;
+      padding: 80px 32px 96px;
+    }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent);
+      background: rgba(74,144,217,0.1);
+      border: 1px solid rgba(74,144,217,0.2);
+      border-radius: 100px; padding: 5px 14px;
+      margin-bottom: 28px;
     }
     .hero h1 {
-      font-size: clamp(32px, 6vw, 52px);
-      font-weight: 800; line-height: 1.1;
-      letter-spacing: -0.02em;
+      font-size: clamp(38px, 7vw, 64px);
+      font-weight: 800; line-height: 1.05;
+      letter-spacing: -0.03em;
+      max-width: 640px;
     }
-    .hero p {
-      margin-top: 16px; font-size: 18px;
-      color: var(--muted); line-height: 1.6;
+    .hero h1 span {
+      background: linear-gradient(135deg, #fff 40%, rgba(255,255,255,0.55));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      margin-top: 20px;
+      font-size: 18px; color: var(--muted);
+      line-height: 1.65; max-width: 480px;
     }
 
-    .apps {
-      max-width: 800px; margin: 0 auto;
-      padding: 0 24px 80px;
+    /* ── Section label ─────────────────────────────────────── */
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 20px;
     }
-    .apps h2 {
-      font-size: 13px; font-weight: 700;
-      color: var(--muted); letter-spacing: 0.06em;
-      text-transform: uppercase; margin-bottom: 20px;
+
+    /* ── Apps grid ─────────────────────────────────────────── */
+    .apps-section {
+      position: relative; z-index: 1;
+      max-width: 900px; margin: 0 auto;
+      padding: 0 32px 100px;
     }
+
     .app-card {
+      display: flex; gap: 24px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 24px; display: flex; gap: 20px;
-      align-items: center;
+      padding: 28px;
       text-decoration: none; color: inherit;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, transform 0.2s;
+      align-items: flex-start;
     }
-    .app-card:hover { border-color: rgba(255,255,255,0.18); }
+    .app-card:hover {
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
     .app-icon {
-      width: 64px; height: 64px; border-radius: 16px;
+      width: 72px; height: 72px;
+      border-radius: 18px;
+      overflow: hidden; flex-shrink: 0;
       background: linear-gradient(145deg, #0D2A4F, #1A4A8A);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 30px; flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     }
-    .app-info { flex: 1; }
-    .app-name { font-size: 18px; font-weight: 700; }
-    .app-desc { font-size: 14px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+    .app-icon img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+    .app-icon-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 34px;
+    }
+
+    .app-body { flex: 1; }
+
+    .app-meta {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 8px;
+    }
+    .app-name {
+      font-size: 20px; font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .app-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: rgba(74,144,217,0.9);
+      background: rgba(74,144,217,0.12);
+      border: 1px solid rgba(74,144,217,0.2);
+      border-radius: 6px; padding: 3px 8px;
+    }
+
+    .app-desc {
+      font-size: 14px; color: var(--muted);
+      line-height: 1.65; max-width: 520px;
+    }
+
     .app-links {
-      margin-top: 12px; display: flex; gap: 12px;
+      margin-top: 16px;
+      display: flex; gap: 0; flex-wrap: wrap;
     }
     .app-link {
-      font-size: 12px; font-weight: 600; color: var(--accent);
-      text-decoration: none;
+      font-size: 13px; font-weight: 600; color: var(--accent);
+      text-decoration: none; padding: 6px 14px;
+      border: 1px solid rgba(74,144,217,0.25);
+      border-radius: 8px; margin-right: 8px; margin-bottom: 8px;
+      transition: background 0.15s, border-color 0.15s;
     }
-    .app-link:hover { text-decoration: underline; }
+    .app-link:hover {
+      background: rgba(74,144,217,0.1);
+      border-color: rgba(74,144,217,0.45);
+    }
+    .app-link.primary {
+      background: var(--accent); color: #fff;
+      border-color: transparent;
+    }
+    .app-link.primary:hover {
+      background: #5B9FE8;
+    }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
-      text-align: center;
+    /* ── Divider ───────────────────────────────────────────── */
+    hr {
+      border: none; border-top: 1px solid var(--border);
+      max-width: 900px; margin: 0 auto;
     }
-    .footer-text {
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      position: relative; z-index: 1;
+      max-width: 900px; margin: 0 auto;
+      padding: 40px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand {
       font-size: 13px; color: var(--muted);
     }
+    .footer-brand strong { color: rgba(255,255,255,0.6); }
+    .footer-links {
+      display: flex; gap: 20px; flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 13px; color: var(--muted);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: #fff; }
   </style>
 </head>
 <body>
+  <div class="bg-glow"></div>
+
   <nav>
-    <span class="brand">Glide<span>Nova</span></span>
+    <span class="brand">Glide<em>Nova</em></span>
+    <span class="nav-tagline">Simple, beautiful mobile apps</span>
   </nav>
 
   <div class="hero">
-    <h1>Simple, beautiful<br>mobile apps.</h1>
-    <p>A studio building focused, high-quality apps<br>for iPhone and iPad.</p>
+    <div class="hero-label">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
+      iOS App Studio
+    </div>
+    <h1><span>Apps built for the<br>moments that matter.</span></h1>
+    <p class="hero-sub">We build focused, high-quality apps for iPhone and iPad. Simple to use, beautifully designed, built to last.</p>
   </div>
 
-  <div class="apps">
-    <h2>Apps</h2>
-    <a href="CalmAnchor/index.html" class="app-card">
-      <div class="app-icon">⚓</div>
-      <div class="app-info">
-        <div class="app-name">CalmAnchor</div>
-        <div class="app-desc">Panic attack and anxiety relief. One tap starts your recovery with breathing exercises, grounding, and AI-powered journal insights.</div>
+  <div class="apps-section">
+    <p class="section-label">Our apps</p>
+
+    <div class="app-card">
+      <div class="app-icon">
+        <img src="CalmAnchor/icon.png" alt="CalmAnchor" onerror="this.parentElement.innerHTML='<div class=\'app-icon-placeholder\'>⚓</div>'">
+      </div>
+      <div class="app-body">
+        <div class="app-meta">
+          <span class="app-name">CalmAnchor</span>
+          <span class="app-badge">iPhone &amp; iPad</span>
+        </div>
+        <p class="app-desc">Panic attack and anxiety relief. One tap starts your recovery — step-by-step breathing, grounding exercises, and AI-powered journal insights to help you understand your patterns.</p>
         <div class="app-links">
-          <a href="CalmAnchor/index.html" class="app-link">Learn more</a>
+          <a href="CalmAnchor/index.html" class="app-link primary">Learn more</a>
           <a href="CalmAnchor/privacy.html" class="app-link">Privacy</a>
           <a href="CalmAnchor/support.html" class="app-link">Support</a>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 
+  <hr>
+
   <footer>
-    <p class="footer-text">GlideNova &mdash; A studio building simple, beautiful mobile apps.</p>
+    <p class="footer-brand">A <strong>GlideNova</strong> studio &mdash; building simple, beautiful mobile apps.</p>
+    <div class="footer-links">
+      <a href="CalmAnchor/privacy.html">Privacy</a>
+      <a href="CalmAnchor/terms.html">Terms</a>
+      <a href="CalmAnchor/support.html">Support</a>
+    </div>
   </footer>
 </body>
 </html>

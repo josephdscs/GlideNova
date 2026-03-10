@@ -1,4 +1,4 @@
-/* CalmAnchor — app color overrides only */
+/* CalmAnchor — color overrides + app-specific components */
 :root {
   --accent:    #4A90D9;
   --accent2:   #6AAAE8;
@@ -8,4 +8,37 @@
   --text:      #FFFFFF;
   --text-muted: rgba(255,255,255,0.58);
   --text-faint: rgba(255,255,255,0.26);
+}
+
+/* ── Medical disclaimer ──────────────────────────────────── */
+.disclaimer {
+  padding: 0 0 48px;
+}
+.disclaimer-box {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 3px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.disclaimer-icon {
+  font-size: 16px; font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  flex-shrink: 0; margin-top: 1px;
+  font-style: normal;
+  width: 20px; height: 20px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+}
+.disclaimer-box p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+}
+.disclaimer-box p strong {
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
 }

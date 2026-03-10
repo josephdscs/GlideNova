@@ -61,7 +61,7 @@ const viewport = isAppStore
     await new Promise(r => setTimeout(r, 300));
 
     const outputFile = path.join(outputDir, file.replace('.html', '.png'));
-    await page.screenshot({ path: outputFile, fullPage: false });
+    await page.screenshot({ path: outputFile, fullPage: false, omitBackground: true });
     await page.close();
 
     const { width, height } = viewport;
