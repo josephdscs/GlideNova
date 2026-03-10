@@ -1,0 +1,11 @@
+/* CalmAnchor — app color overrides only */
+:root {
+  --accent:    #4A90D9;
+  --accent2:   #6AAAE8;
+  --bg:        #070F20;
+  --surface:   #0D1F3C;
+  --surface2:  #112845;
+  --text:      #FFFFFF;
+  --text-muted: rgba(255,255,255,0.58);
+  --text-faint: rgba(255,255,255,0.26);
+}

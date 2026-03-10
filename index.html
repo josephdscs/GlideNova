@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlideNova — Simple, beautiful mobile apps</title>
+  <meta name="description" content="GlideNova is a studio building simple, beautiful mobile apps for iPhone and iPad.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #070C18;
+      --surface: #0D1525;
+      --text: #fff;
+      --muted: rgba(255,255,255,0.45);
+      --accent: #4A90D9;
+      --border: rgba(255,255,255,0.08);
+      --radius: 16px;
+    }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    nav {
+      max-width: 800px; margin: 0 auto;
+      padding: 24px 24px 0;
+      display: flex; align-items: center;
+    }
+    .brand {
+      font-size: 18px; font-weight: 800; color: #fff;
+      letter-spacing: -0.01em;
+    }
+    .brand span { color: var(--accent); }
+
+    .hero {
+      max-width: 800px; margin: 0 auto;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      margin-top: 16px; font-size: 18px;
+      color: var(--muted); line-height: 1.6;
+    }
+
+    .apps {
+      max-width: 800px; margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .apps h2 {
+      font-size: 13px; font-weight: 700;
+      color: var(--muted); letter-spacing: 0.06em;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .app-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px; display: flex; gap: 20px;
+      align-items: center;
+      text-decoration: none; color: inherit;
+      transition: border-color 0.2s;
+    }
+    .app-card:hover { border-color: rgba(255,255,255,0.18); }
+    .app-icon {
+      width: 64px; height: 64px; border-radius: 16px;
+      background: linear-gradient(145deg, #0D2A4F, #1A4A8A);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 30px; flex-shrink: 0;
+    }
+    .app-info { flex: 1; }
+    .app-name { font-size: 18px; font-weight: 700; }
+    .app-desc { font-size: 14px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+    .app-links {
+      margin-top: 12px; display: flex; gap: 12px;
+    }
+    .app-link {
+      font-size: 12px; font-weight: 600; color: var(--accent);
+      text-decoration: none;
+    }
+    .app-link:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-text {
+      font-size: 13px; color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="brand">Glide<span>Nova</span></span>
+  </nav>
+
+  <div class="hero">
+    <h1>Simple, beautiful<br>mobile apps.</h1>
+    <p>A studio building focused, high-quality apps<br>for iPhone and iPad.</p>
+  </div>
+
+  <div class="apps">
+    <h2>Apps</h2>
+    <a href="CalmAnchor/index.html" class="app-card">
+      <div class="app-icon">⚓</div>
+      <div class="app-info">
+        <div class="app-name">CalmAnchor</div>
+        <div class="app-desc">Panic attack and anxiety relief. One tap starts your recovery with breathing exercises, grounding, and AI-powered journal insights.</div>
+        <div class="app-links">
+          <a href="CalmAnchor/index.html" class="app-link">Learn more</a>
+          <a href="CalmAnchor/privacy.html" class="app-link">Privacy</a>
+          <a href="CalmAnchor/support.html" class="app-link">Support</a>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    <p class="footer-text">GlideNova &mdash; A studio building simple, beautiful mobile apps.</p>
+  </footer>
+</body>
+</html>

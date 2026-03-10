@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px">
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 390px; height: 844px; overflow: hidden;
+      background: transparent;
+      display: flex; align-items: center; justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen-bg {
+      width: 100%; height: 100%;
+      background: linear-gradient(180deg, #0A1628 0%, #0D1F3C 100%);
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+    }
+
+    /* Status bar */
+    .status-bar {
+      height: 54px; display: flex; align-items: flex-end;
+      padding: 0 24px 8px; justify-content: space-between;
+    }
+    .status-time { font-size: 15px; font-weight: 600; color: #fff; }
+    .status-icons { display: flex; gap: 6px; align-items: center; }
+    .status-icons span { font-size: 13px; color: #fff; }
+
+    /* Top bar */
+    .top-bar {
+      padding: 6px 20px 0;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .step-label {
+      font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .close-btn {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: rgba(255,255,255,0.6);
+    }
+
+    /* Progress dots */
+    .progress-dots {
+      display: flex; gap: 6px; justify-content: center;
+      padding: 12px 0 6px;
+    }
+    .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+    }
+    .dot.active { background: #4A90D9; width: 18px; border-radius: 3px; }
+    .dot.done { background: rgba(74,144,217,0.5); }
+
+    /* Main content */
+    .content {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 0 20px; gap: 0;
+    }
+
+    /* Breathing circle */
+    .breath-outer {
+      width: 230px; height: 230px; border-radius: 50%;
+      background: rgba(74,144,217,0.08);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .breath-ring {
+      position: absolute;
+      width: 230px; height: 230px; border-radius: 50%;
+      border: 1.5px solid rgba(74,144,217,0.2);
+    }
+    .breath-mid {
+      width: 186px; height: 186px; border-radius: 50%;
+      background: rgba(74,144,217,0.12);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .breath-inner {
+      width: 148px; height: 148px; border-radius: 50%;
+      background: radial-gradient(circle at 38% 38%, #5BA3E8, #2D6FBF);
+      box-shadow: 0 0 50px rgba(74,144,217,0.5), 0 0 20px rgba(74,144,217,0.3);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2px;
+    }
+    .breath-phase {
+      font-size: 13px; font-weight: 700; color: #fff;
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .breath-count { font-size: 36px; font-weight: 300; color: #fff; }
+
+    /* Instruction text */
+    .instruction {
+      margin-top: 30px; text-align: center;
+    }
+    .instruction-main {
+      font-size: 20px; font-weight: 600; color: #fff;
+      margin-bottom: 8px;
+    }
+    .instruction-sub {
+      font-size: 13px; color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+
+    /* Cycle indicator */
+    .cycle-row {
+      display: flex; gap: 8px; margin-top: 28px; align-items: center;
+    }
+    .cycle-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(74,144,217,0.3);
+    }
+    .cycle-dot.done { background: #4A90D9; }
+    .cycle-label {
+      font-size: 11px; color: rgba(255,255,255,0.35);
+      margin-left: 4px;
+    }
+
+    /* Technique badge */
+    .technique-badge {
+      margin-top: 20px;
+      background: rgba(74,144,217,0.15);
+      border: 1px solid rgba(74,144,217,0.3);
+      border-radius: 20px; padding: 6px 16px;
+      font-size: 12px; font-weight: 600; color: #4A90D9;
+    }
+
+    /* Bottom padding for home indicator */
+    .bottom-safe { height: 34px; }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen-bg">
+
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <span>●●●</span>
+              <span>WiFi</span>
+              <span>🔋</span>
+            </div>
+          </div>
+
+          <div class="top-bar">
+            <span class="step-label">Step 1 of 3 — Breathe</span>
+            <div class="close-btn">✕</div>
+          </div>
+
+          <div class="progress-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+
+          <div class="content">
+            <div class="breath-outer">
+              <div class="breath-ring"></div>
+              <div class="breath-mid">
+                <div class="breath-inner">
+                  <span class="breath-phase">Breathe In</span>
+                  <span class="breath-count">3</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="instruction">
+              <div class="instruction-main">Breathe in slowly</div>
+              <div class="instruction-sub">Follow the circle. Let your<br>belly expand fully.</div>
+            </div>
+
+            <div class="cycle-row">
+              <div class="cycle-dot done"></div>
+              <div class="cycle-dot done"></div>
+              <div class="cycle-dot"></div>
+              <div class="cycle-dot"></div>
+              <span class="cycle-label">Cycle 2 of 4</span>
+            </div>
+
+            <div class="technique-badge">Box Breathing · 4-4-4-4</div>
+          </div>
+
+          <div class="bottom-safe"></div>
+
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

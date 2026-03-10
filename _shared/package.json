@@ -1,0 +1,12 @@
+{
+  "name": "glidenova-capture",
+  "version": "1.0.0",
+  "description": "Screenshot capture for GlideNova app sites",
+  "private": true,
+  "scripts": {
+    "capture": "node capture.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}

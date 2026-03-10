@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px">
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 390px; height: 844px; overflow: hidden;
+      background: transparent;
+      display: flex; align-items: center; justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen-bg {
+      width: 100%; height: 100%;
+      background: linear-gradient(180deg, #0A1628 0%, #0D1F3C 100%);
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+    }
+
+    /* Status bar */
+    .status-bar {
+      height: 54px; display: flex; align-items: flex-end;
+      padding: 0 24px 8px; justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .status-time { font-size: 15px; font-weight: 600; color: #fff; }
+    .status-icons { display: flex; gap: 6px; align-items: center; }
+    .status-icons span { font-size: 13px; color: #fff; }
+
+    /* Nav bar */
+    .nav-bar {
+      padding: 2px 20px 10px;
+      display: flex; align-items: center; gap: 12px;
+      flex-shrink: 0;
+    }
+    .back-btn {
+      font-size: 16px; color: #4A90D9; font-weight: 500;
+    }
+    .nav-title {
+      font-size: 17px; font-weight: 700; color: #fff;
+    }
+
+    /* Journal meta */
+    .entry-meta {
+      padding: 0 20px 14px;
+      flex-shrink: 0;
+    }
+    .entry-date {
+      font-size: 11px; color: rgba(255,255,255,0.35);
+      letter-spacing: 0.02em; margin-bottom: 8px;
+    }
+    .intensity-row { display: flex; align-items: center; gap: 8px; }
+    .intensity-bar {
+      flex: 1; height: 6px; border-radius: 3px;
+      background: rgba(255,255,255,0.1); overflow: hidden;
+    }
+    .intensity-fill {
+      height: 100%; width: 70%;
+      background: linear-gradient(90deg, #4A90D9, #EF8C44);
+      border-radius: 3px;
+    }
+    .intensity-label {
+      font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.6);
+    }
+
+    /* Content scroll */
+    .scroll-area {
+      flex: 1; overflow: hidden;
+      padding: 0 16px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+
+    /* Notes section */
+    .notes-section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 14px; padding: 12px 14px;
+    }
+    .section-label {
+      font-size: 10px; font-weight: 700;
+      color: rgba(255,255,255,0.35); letter-spacing: 0.06em;
+      text-transform: uppercase; margin-bottom: 6px;
+    }
+    .notes-text {
+      font-size: 13px; color: rgba(255,255,255,0.75);
+      line-height: 1.55;
+    }
+
+    /* AI insights card */
+    .ai-card {
+      background: rgba(74,144,217,0.1);
+      border: 1px solid rgba(74,144,217,0.25);
+      border-radius: 16px; padding: 14px;
+    }
+    .ai-header {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 10px;
+    }
+    .ai-badge {
+      font-size: 10px; font-weight: 700; color: #4A90D9;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      background: rgba(74,144,217,0.15);
+      border-radius: 6px; padding: 3px 8px;
+    }
+    .ai-model {
+      font-size: 10px; color: rgba(255,255,255,0.25);
+      margin-left: auto;
+    }
+
+    .insight-block { margin-bottom: 10px; }
+    .insight-block:last-child { margin-bottom: 0; }
+    .insight-title {
+      font-size: 11px; font-weight: 700;
+      color: rgba(74,144,217,0.9);
+      letter-spacing: 0.04em; margin-bottom: 4px;
+    }
+    .insight-text {
+      font-size: 12px; color: rgba(255,255,255,0.7);
+      line-height: 1.55;
+    }
+
+    /* Analyse button state (already done) */
+    .analyse-btn {
+      background: rgba(74,144,217,0.15);
+      border: 1px solid rgba(74,144,217,0.3);
+      border-radius: 12px; padding: 12px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      flex-shrink: 0; margin: 0 16px 12px;
+    }
+    .analyse-btn span {
+      font-size: 14px; font-weight: 600; color: #4A90D9;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen-bg">
+
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <span>●●●</span>
+              <span>WiFi</span>
+              <span>🔋</span>
+            </div>
+          </div>
+
+          <div class="nav-bar">
+            <span class="back-btn">‹ Journal</span>
+            <span class="nav-title">Entry Detail</span>
+          </div>
+
+          <div class="entry-meta">
+            <div class="entry-date">Monday, 3 March 2026 · 11:24 AM</div>
+            <div class="intensity-row">
+              <div class="intensity-bar">
+                <div class="intensity-fill"></div>
+              </div>
+              <span class="intensity-label">7 / 10</span>
+            </div>
+          </div>
+
+          <div class="scroll-area">
+            <div class="notes-section">
+              <div class="section-label">Trigger</div>
+              <div class="notes-text">Crowded tube, delayed train. Heart started racing and couldn't catch my breath. Felt like I couldn't escape.</div>
+            </div>
+
+            <div class="notes-section">
+              <div class="section-label">What helped</div>
+              <div class="notes-text">Stepped off at the next stop and used the box breathing for about 5 minutes. Started to feel calmer.</div>
+            </div>
+
+            <div class="ai-card">
+              <div class="ai-header">
+                <span class="ai-badge">✦ AI Insights</span>
+                <span class="ai-model">Gemini</span>
+              </div>
+
+              <div class="insight-block">
+                <div class="insight-title">Pattern identified</div>
+                <div class="insight-text">Confined, crowded spaces appear to be a consistent trigger. This fits a classic situational anxiety pattern — your nervous system is reacting to the perceived lack of exit routes.</div>
+              </div>
+
+              <div class="insight-block">
+                <div class="insight-title">What you did well</div>
+                <div class="insight-text">Removing yourself from the environment and using a structured breathing technique was exactly the right response. Box breathing at a 7/10 intensity shows real skill.</div>
+              </div>
+
+              <div class="insight-block">
+                <div class="insight-title">To try next time</div>
+                <div class="insight-text">Before entering a busy station, try 2 minutes of 4-7-8 breathing to pre-regulate your nervous system and lower your baseline anxiety.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="analyse-btn">
+            <span>✦ Re-analyse with AI</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>
