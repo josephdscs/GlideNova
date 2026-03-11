@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 // capture.js — render mockup HTML files to PNG screenshots
 // Usage: node capture.js <AppName> [--appstore]
-//   Default: web screenshots (390x844 @2x, with device frame if present)
-//   --appstore: App Store size (393x852 @3x = 1179x2556px)
+//   Default:    web screenshots  (390×844  @2x  = 780×1688px)
+//   --appstore: App Store 6.9"   (440×956  @3x  = 1320×2868px) — required by Apple
 
 const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
 
-const appName = process.argv[2];
+const appName    = process.argv[2];
 const isAppStore = process.argv.includes('--appstore');
 
 if (!appName) {
@@ -28,9 +28,11 @@ if (!fs.existsSync(mockupsDir)) {
 fs.mkdirSync(outputDir, { recursive: true });
 
 // Viewport config
+// --appstore: iPhone 16 Pro Max 6.9" — 440×956 logical @3x = 1320×2868px (Apple required size)
+// default:    iPhone 14 logical @2x = 780×1688px (web use)
 const viewport = isAppStore
-  ? { width: 393, height: 852, deviceScaleFactor: 3 }  // 1179×2556 output
-  : { width: 390, height: 844, deviceScaleFactor: 2 };  // 780×1688 output
+  ? { width: 440, height: 956, deviceScaleFactor: 3 }   // 1320×2868 output
+  : { width: 390, height: 844, deviceScaleFactor: 2 };   // 780×1688 output
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -48,7 +50,7 @@ const viewport = isAppStore
     process.exit(0);
   }
 
-  console.log(`Capturing ${mockups.length} mockups for ${appName}...`);
+  console.log(`Capturing ${mockups.length} mockups for ${appName} (${isAppStore ? 'App Store 6.9"' : 'web'})...`);
 
   for (const file of mockups) {
     const page = await browser.newPage();
@@ -64,9 +66,8 @@ const viewport = isAppStore
     await page.screenshot({ path: outputFile, fullPage: false, omitBackground: true });
     await page.close();
 
-    const { width, height } = viewport;
-    const actualW = width * viewport.deviceScaleFactor;
-    const actualH = height * viewport.deviceScaleFactor;
+    const actualW = viewport.width  * viewport.deviceScaleFactor;
+    const actualH = viewport.height * viewport.deviceScaleFactor;
     console.log(`  ✓ ${file} → ${outputFile.split('/').pop()} (${actualW}×${actualH}px)`);
   }
 
