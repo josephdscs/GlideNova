@@ -137,13 +137,14 @@ nav {
   font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 52px;
+  padding: 0 24px;
 }
 .screenshots-scroll {
   display: flex;
   gap: 24px;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 24px;
+  padding: 0 24px 8px;
 }
 .screenshot-item {
   flex: 0 0 auto;
@@ -154,7 +155,7 @@ nav {
   border-radius: 20px;
   box-shadow: 0 24px 64px rgba(0,0,0,0.5);
 }
-/* Device-framed screenshot — frame provided by device-frame.css in mockup */
+/* Device-framed screenshot — transparent PNG, drop-shadow handles depth */
 .screenshot-framed img {
   width: 220px;
   border-radius: 0;
@@ -410,12 +411,72 @@ footer {
 .contact-box a { color: var(--accent); }
 
 /* ─── Responsive ─────────────────────────────────────────── */
-@media (max-width: 600px) {
-  .nav-inner { padding: 0 16px; }
-  .hero { padding: 64px 0 56px; }
-  .screenshots-scroll { gap: 14px; }
-  .screenshot-flat img { width: 180px; }
-  .screenshot-framed img { width: 160px; }
-  .pricing-cards { flex-direction: column; align-items: center; }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .screenshot-framed img { width: 180px; }
+  .screenshot-flat img   { width: 200px; }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  /* Nav */
+  .nav-inner { padding: 0 16px; height: 56px; }
+  .btn-nav   { padding: 8px 14px; font-size: 0.8rem; }
+
+  /* Hero */
+  .hero { padding: 56px 0 48px; }
+  .hero h1 { letter-spacing: -0.03em; }
+
+  /* Container */
+  .container { padding: 0 16px; }
+
+  /* Screenshots — horizontal scroll snap carousel */
+  .screenshots { padding: 56px 0; }
+  .screenshots h2 { margin-bottom: 32px; font-size: 1.4rem; padding: 0 16px; }
+  .screenshots-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    justify-content: flex-start;
+    padding: 0 16px 20px;
+    gap: 16px;
+    /* hide scrollbar */
+    scrollbar-width: none;
+  }
+  .screenshots-scroll::-webkit-scrollbar { display: none; }
+  .screenshot-item {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  .screenshot-framed img {
+    width: 62vw;
+    max-width: 240px;
+  }
+  .screenshot-flat img {
+    width: 68vw;
+    max-width: 260px;
+    border-radius: 14px;
+  }
+
+  /* Features */
+  .features { padding: 56px 0; }
   .features-grid { grid-template-columns: 1fr; }
+  .feature-card { padding: 22px 18px; }
+
+  /* Pricing */
+  .pricing { padding: 56px 0; }
+  .pricing-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pricing-card { min-width: 0; max-width: 100%; }
+
+  /* Download button */
+  .btn-download { width: 100%; justify-content: center; }
+
+  /* Legal */
+  .legal-page { padding: 48px 16px; }
 }
