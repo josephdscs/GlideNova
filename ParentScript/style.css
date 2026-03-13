@@ -1,0 +1,102 @@
+/* ParentScript — color overrides + app-specific components */
+:root {
+  --accent:     #E8825A;
+  --accent2:    #F0A080;
+  --bg:         #FDF6F0;
+  --surface:    #FFF8F3;
+  --surface2:   #FFFBF7;
+  --text:       #2C1810;
+  --text-muted: rgba(44,24,16,0.62);
+  --text-faint: rgba(44,24,16,0.30);
+}
+
+/* Override nav for light background */
+nav {
+  background: rgba(253,246,240,0.88);
+  border-bottom: 1px solid rgba(44,24,16,0.07);
+}
+
+/* Override hero eyebrow */
+.hero-eyebrow {
+  color: var(--accent);
+  background: rgba(232,130,90,0.10);
+}
+
+/* Override features border */
+.features {
+  border-top: 1px solid rgba(44,24,16,0.07);
+}
+.feature-card {
+  background: var(--surface);
+  border: 1px solid rgba(44,24,16,0.07);
+}
+.feature-card:hover { border-color: rgba(44,24,16,0.14); }
+
+/* Override pricing border */
+.pricing {
+  border-top: 1px solid rgba(44,24,16,0.07);
+}
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid rgba(44,24,16,0.10);
+}
+.pricing-card.featured {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(232,130,90,0.06) 100%);
+}
+
+/* Override footer */
+footer {
+  border-top: 1px solid rgba(44,24,16,0.07);
+}
+
+/* Override screenshots */
+.screenshots {
+  background: #F9EDE5;
+}
+.screenshot-framed img {
+  filter: drop-shadow(0 28px 48px rgba(44,24,16,0.22));
+}
+
+/* Override legal pages */
+.legal-page a { color: var(--accent); }
+.faq-item {
+  border-bottom: 1px solid rgba(44,24,16,0.08);
+}
+.contact-box {
+  background: var(--surface);
+  border: 1px solid rgba(44,24,16,0.07);
+}
+
+/* ── Wellness disclaimer ─────────────────────────────────── */
+.disclaimer {
+  padding: 0 0 48px;
+}
+.disclaimer-box {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: rgba(232,130,90,0.06);
+  border: 1px solid rgba(232,130,90,0.15);
+  border-left: 3px solid rgba(232,130,90,0.45);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.disclaimer-icon {
+  font-size: 16px; font-weight: 700;
+  color: rgba(232,130,90,0.7);
+  flex-shrink: 0; margin-top: 1px;
+  font-style: normal;
+  width: 20px; height: 20px;
+  border: 1.5px solid rgba(232,130,90,0.45);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+}
+.disclaimer-box p {
+  font-size: 13px;
+  color: rgba(44,24,16,0.55);
+  line-height: 1.65;
+}
+.disclaimer-box p strong {
+  color: rgba(44,24,16,0.80);
+  font-weight: 600;
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>ParentScript — Home</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── App screen content ── */
+    .screen-content {
+      width: 100%;
+      height: 100%;
+      background: #FDF6F0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Status bar area */
+    .status-bar {
+      height: 54px;
+      flex-shrink: 0;
+    }
+
+    /* Nav bar */
+    .app-nav {
+      padding: 0 20px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .app-nav-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #2C1810;
+    }
+    .app-nav-avatar {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: #E8825A;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: #fff; font-weight: 700;
+    }
+
+    /* Scroll content */
+    .scroll-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0 20px 20px;
+      scrollbar-width: none;
+    }
+    .scroll-area::-webkit-scrollbar { display: none; }
+
+    /* SOS button */
+    .sos-card {
+      background: #E8825A;
+      border-radius: 24px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(232,130,90,0.35);
+    }
+    .sos-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 8px;
+    }
+    .sos-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .sos-subtitle {
+      font-size: 13px;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .sos-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #E8825A;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 50px;
+    }
+    .sos-btn-dot {
+      width: 8px; height: 8px;
+      background: #E8825A;
+      border-radius: 50%;
+    }
+
+    /* Daily card */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(44,24,16,0.45);
+      margin-bottom: 12px;
+    }
+    .daily-card {
+      background: #FFF8F3;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(44,24,16,0.07);
+    }
+    .daily-situation {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #E8825A;
+      margin-bottom: 8px;
+    }
+    .daily-headline {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2C1810;
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+    .phrase-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .phrase-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .phrase-badge.wrong {
+      background: rgba(212,117,106,0.12);
+      color: #D4756A;
+    }
+    .phrase-badge.right {
+      background: rgba(107,175,141,0.12);
+      color: #6BAF8D;
+    }
+    .phrase-text {
+      font-size: 14px;
+      color: #2C1810;
+      line-height: 1.45;
+      font-style: italic;
+    }
+
+    /* Quick actions */
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .quick-card {
+      background: #FFF8F3;
+      border-radius: 16px;
+      padding: 18px 16px;
+      border: 1px solid rgba(44,24,16,0.07);
+    }
+    .quick-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .quick-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2C1810;
+      margin-bottom: 3px;
+    }
+    .quick-sub {
+      font-size: 11px;
+      color: rgba(44,24,16,0.45);
+      line-height: 1.35;
+    }
+
+    /* Tab bar */
+    .tab-bar {
+      flex-shrink: 0;
+      height: 83px;
+      background: rgba(253,246,240,0.95);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(44,24,16,0.07);
+      display: flex;
+      align-items: flex-start;
+      padding-top: 10px;
+    }
+    .tab-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+    }
+    .tab-icon {
+      font-size: 22px;
+    }
+    .tab-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(44,24,16,0.40);
+    }
+    .tab-item.active .tab-label {
+      color: #E8825A;
+    }
+    .tab-item.active .tab-icon {
+      filter: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen-content">
+          <div class="status-bar"></div>
+
+          <div class="app-nav">
+            <span class="app-nav-title">ParentScript</span>
+            <div class="app-nav-avatar">M</div>
+          </div>
+
+          <div class="scroll-area">
+            <!-- SOS Tantrum Toolkit -->
+            <div class="sos-card">
+              <p class="sos-label">Tantrum Toolkit</p>
+              <p class="sos-title">I need help right now</p>
+              <p class="sos-subtitle">Active meltdown? Step-by-step guide.<br>Always free, no login needed.</p>
+              <button class="sos-btn">
+                <span class="sos-btn-dot"></span>
+                Start Toolkit
+              </button>
+            </div>
+
+            <!-- Daily card -->
+            <p class="section-title">Today's Script</p>
+            <div class="daily-card">
+              <p class="daily-situation">Toddler Whining</p>
+              <p class="daily-headline">Your 3-year-old is whining instead of using words</p>
+              <div class="phrase-row">
+                <span class="phrase-badge wrong">Avoid</span>
+                <span class="phrase-text">"Stop whining. Use your words."</span>
+              </div>
+              <div class="phrase-row">
+                <span class="phrase-badge right">Try this</span>
+                <span class="phrase-text">"I can hear you need something. Can you show me or tell me with a big voice?"</span>
+              </div>
+            </div>
+
+            <!-- Quick actions -->
+            <p class="section-title">Quick Access</p>
+            <div class="quick-grid">
+              <div class="quick-card">
+                <div class="quick-icon">📚</div>
+                <p class="quick-title">Script Library</p>
+                <p class="quick-sub">Browse by situation + age</p>
+              </div>
+              <div class="quick-card">
+                <div class="quick-icon">✨</div>
+                <p class="quick-title">Ask AI</p>
+                <p class="quick-sub">Describe your situation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab bar -->
+          <div class="tab-bar">
+            <div class="tab-item active">
+              <span class="tab-icon">🏠</span>
+              <span class="tab-label">Home</span>
+            </div>
+            <div class="tab-item">
+              <span class="tab-icon">📚</span>
+              <span class="tab-label">Library</span>
+            </div>
+            <div class="tab-item">
+              <span class="tab-icon">✨</span>
+              <span class="tab-label">Ask AI</span>
+            </div>
+            <div class="tab-item">
+              <span class="tab-icon">🔖</span>
+              <span class="tab-label">Saved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

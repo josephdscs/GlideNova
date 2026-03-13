@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>ParentScript — Tantrum Toolkit</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen-content {
+      width: 100%;
+      height: 100%;
+      background: #FDF6F0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .status-bar { height: 54px; flex-shrink: 0; }
+
+    /* Progress bar */
+    .progress-bar-area {
+      padding: 0 24px 0;
+      flex-shrink: 0;
+    }
+    .progress-track {
+      width: 100%;
+      height: 5px;
+      background: rgba(44,24,16,0.10);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      width: 66.6%;
+      height: 100%;
+      background: #E8825A;
+      border-radius: 3px;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 32px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .step-indicator {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E8825A;
+      margin-bottom: 20px;
+    }
+
+    .step-big-label {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(44,24,16,0.40);
+      margin-bottom: 10px;
+    }
+
+    .step-instruction {
+      font-size: 42px;
+      font-weight: 800;
+      color: #2C1810;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      margin-bottom: 24px;
+    }
+
+    .step-detail {
+      font-size: 17px;
+      color: rgba(44,24,16,0.60);
+      line-height: 1.65;
+      max-width: 320px;
+    }
+
+    /* Quote card */
+    .say-card {
+      background: #FFF8F3;
+      border: 1px solid rgba(44,24,16,0.08);
+      border-left: 4px solid #E8825A;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-top: 28px;
+    }
+    .say-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #E8825A;
+      margin-bottom: 8px;
+    }
+    .say-quote {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2C1810;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+    .say-sub {
+      font-size: 13px;
+      color: rgba(44,24,16,0.50);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* Footer area */
+    .step-footer {
+      padding: 0 28px 48px;
+      flex-shrink: 0;
+    }
+    .next-btn {
+      width: 100%;
+      padding: 18px;
+      background: #E8825A;
+      color: #fff;
+      border-radius: 16px;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 24px rgba(232,130,90,0.30);
+    }
+    .exit-btn {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(44,24,16,0.35);
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen-content">
+          <div class="status-bar"></div>
+
+          <!-- Progress bar -->
+          <div class="progress-bar-area">
+            <div class="progress-track">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+
+          <!-- Main step content -->
+          <div class="main-content">
+            <p class="step-indicator">Step 4 of 6</p>
+            <p class="step-big-label">Say this once</p>
+            <p class="step-instruction">Make contact.<br>One sentence.</p>
+            <p class="step-detail">Don't ask questions. Don't explain. Don't negotiate. Just let them know you're there.</p>
+
+            <div class="say-card">
+              <p class="say-label">Say exactly this</p>
+              <p class="say-quote">"I'm right here."</p>
+              <p class="say-sub">Then wait. Silence is the intervention right now. Their nervous system needs time to regulate — your presence is enough.</p>
+            </div>
+          </div>
+
+          <!-- Next button -->
+          <div class="step-footer">
+            <div class="next-btn">I said it — next step</div>
+            <div class="exit-btn">Exit toolkit</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

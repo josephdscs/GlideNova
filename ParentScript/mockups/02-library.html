@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>ParentScript — Script Library</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen-content {
+      width: 100%;
+      height: 100%;
+      background: #FDF6F0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .status-bar { height: 54px; flex-shrink: 0; }
+
+    .app-nav {
+      padding: 0 20px 12px;
+      flex-shrink: 0;
+    }
+    .app-nav-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #2C1810;
+      margin-bottom: 14px;
+    }
+
+    /* Age filter chips */
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+    .filter-row::-webkit-scrollbar { display: none; }
+    .chip {
+      flex-shrink: 0;
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      background: #FFF8F3;
+      color: rgba(44,24,16,0.55);
+      border: 1px solid rgba(44,24,16,0.10);
+    }
+    .chip.active {
+      background: #E8825A;
+      color: #fff;
+      border-color: transparent;
+    }
+
+    /* Scroll content */
+    .scroll-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px 20px;
+      scrollbar-width: none;
+    }
+    .scroll-area::-webkit-scrollbar { display: none; }
+
+    /* Situation cards */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(44,24,16,0.40);
+      margin-bottom: 10px;
+    }
+
+    .situation-card {
+      background: #FFF8F3;
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(44,24,16,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .situation-card.expanded {
+      flex-direction: column;
+      align-items: stretch;
+      border-color: rgba(232,130,90,0.30);
+      background: #FFF4EE;
+    }
+    .situation-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .situation-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .situation-emoji {
+      font-size: 22px;
+    }
+    .situation-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2C1810;
+    }
+    .situation-count {
+      font-size: 12px;
+      color: rgba(44,24,16,0.45);
+    }
+    .situation-chevron {
+      color: rgba(44,24,16,0.30);
+      font-size: 16px;
+    }
+    .situation-chevron.open {
+      color: #E8825A;
+      transform: rotate(90deg);
+      display: inline-block;
+    }
+
+    /* Expanded content */
+    .expanded-divider {
+      height: 1px;
+      background: rgba(44,24,16,0.08);
+      margin: 14px 0;
+    }
+    .wrong-phrase {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #D4756A;
+      margin-bottom: 6px;
+    }
+    .wrong-text {
+      font-size: 14px;
+      font-style: italic;
+      color: rgba(44,24,16,0.70);
+      margin-bottom: 4px;
+    }
+    .why-text {
+      font-size: 12px;
+      color: rgba(44,24,16,0.45);
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+    .say-this-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #6BAF8D;
+      margin-bottom: 8px;
+    }
+    .script-pill {
+      background: rgba(107,175,141,0.10);
+      border: 1px solid rgba(107,175,141,0.20);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #2C1810;
+      line-height: 1.45;
+    }
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .action-btn {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 8px;
+      background: rgba(44,24,16,0.06);
+      color: rgba(44,24,16,0.55);
+    }
+    .action-btn.primary {
+      background: #E8825A;
+      color: #fff;
+    }
+
+    /* Tab bar */
+    .tab-bar {
+      flex-shrink: 0;
+      height: 83px;
+      background: rgba(253,246,240,0.95);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(44,24,16,0.07);
+      display: flex;
+      align-items: flex-start;
+      padding-top: 10px;
+    }
+    .tab-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    .tab-icon { font-size: 22px; }
+    .tab-label { font-size: 10px; font-weight: 600; color: rgba(44,24,16,0.40); }
+    .tab-item.active .tab-label { color: #E8825A; }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen-content">
+          <div class="status-bar"></div>
+
+          <div class="app-nav">
+            <p class="app-nav-title">Script Library</p>
+            <div class="filter-row">
+              <span class="chip active">All Ages</span>
+              <span class="chip">Ages 1–2</span>
+              <span class="chip">Ages 3–4</span>
+              <span class="chip">Ages 5–6</span>
+            </div>
+          </div>
+
+          <div class="scroll-area">
+            <p class="section-label">10 situations</p>
+
+            <!-- Collapsed cards -->
+            <div class="situation-card">
+              <div class="situation-left">
+                <span class="situation-emoji">😤</span>
+                <div>
+                  <p class="situation-name">Tantrums &amp; Meltdowns</p>
+                  <p class="situation-count">9 scripts</p>
+                </div>
+              </div>
+              <span class="situation-chevron">›</span>
+            </div>
+
+            <!-- Expanded card -->
+            <div class="situation-card expanded">
+              <div class="situation-header">
+                <div class="situation-left">
+                  <span class="situation-emoji">👋</span>
+                  <div>
+                    <p class="situation-name">Hitting &amp; Biting</p>
+                    <p class="situation-count">6 scripts</p>
+                  </div>
+                </div>
+                <span class="situation-chevron open">›</span>
+              </div>
+              <div class="expanded-divider"></div>
+              <p class="wrong-phrase">Don't say this</p>
+              <p class="wrong-text">"Why did you hit your sister? That's so mean."</p>
+              <p class="why-text">Shame activates the survival brain — they can't process or learn while in that state.</p>
+              <p class="say-this-label">Say this instead</p>
+              <div class="script-pill">"I won't let you hit. Gentle hands. Show me gentle."</div>
+              <div class="script-pill">"You're frustrated. You can be frustrated. Hitting hurts — let's find a different way."</div>
+              <div class="card-actions">
+                <span class="action-btn">Save</span>
+                <span class="action-btn primary">Ask AI about this</span>
+              </div>
+            </div>
+
+            <div class="situation-card">
+              <div class="situation-left">
+                <span class="situation-emoji">👂</span>
+                <div>
+                  <p class="situation-name">Not Listening</p>
+                  <p class="situation-count">8 scripts</p>
+                </div>
+              </div>
+              <span class="situation-chevron">›</span>
+            </div>
+
+            <div class="situation-card">
+              <div class="situation-left">
+                <span class="situation-emoji">🌙</span>
+                <div>
+                  <p class="situation-name">Bedtime Refusal</p>
+                  <p class="situation-count">7 scripts</p>
+                </div>
+              </div>
+              <span class="situation-chevron">›</span>
+            </div>
+          </div>
+
+          <div class="tab-bar">
+            <div class="tab-item">
+              <span class="tab-icon">🏠</span>
+              <span class="tab-label">Home</span>
+            </div>
+            <div class="tab-item active">
+              <span class="tab-icon">📚</span>
+              <span class="tab-label">Library</span>
+            </div>
+            <div class="tab-item">
+              <span class="tab-icon">✨</span>
+              <span class="tab-label">Ask AI</span>
+            </div>
+            <div class="tab-item">
+              <span class="tab-icon">🔖</span>
+              <span class="tab-label">Saved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>
