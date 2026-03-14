@@ -32,6 +32,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ─── Layout ─────────────────────────────────────────────── */
@@ -427,6 +428,7 @@ footer {
   /* Hero */
   .hero { padding: 56px 0 48px; }
   .hero h1 { letter-spacing: -0.03em; }
+  .appstore-badge { display: block; margin: 0 auto; width: fit-content; }
 
   /* Container */
   .container { padding: 0 16px; }
@@ -443,6 +445,7 @@ footer {
     justify-content: flex-start;
     padding: 0 16px 20px;
     gap: 16px;
+    touch-action: pan-x;
     /* hide scrollbar */
     scrollbar-width: none;
   }
