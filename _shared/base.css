@@ -159,7 +159,9 @@ nav {
 /* Device-framed screenshot — transparent PNG, drop-shadow handles depth */
 .screenshot-framed img {
   width: 220px;
-  border-radius: 0;
+  /* Match device-shell corner radius: min(54px, 13.8%) of displayed width.
+     At 220px display: 54 * (220/390) ≈ 30px. Clips any non-transparent corners. */
+  border-radius: 14%;
   filter: drop-shadow(0 28px 48px rgba(0,0,0,0.55));
 }
 
