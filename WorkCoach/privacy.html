@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — WorkCoach</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="legal-page">
+    <a href="index.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to WorkCoach
+    </a>
+
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective date: March 17, 2026</p>
+
+    <h2>Overview</h2>
+    <p>WorkCoach is built by GlideNova. This policy explains what data we collect, how we use it, and what stays on your device. We keep it short because there is not much to say — WorkCoach is a privacy-first app.</p>
+
+    <h2>Data That Stays on Your Device</h2>
+    <p>All session data — task names, session durations, timestamps, focus scores, and streak counts — is stored locally using SwiftData on your iPhone or iPad. This data never leaves your device. GlideNova does not have access to it, and it is not backed up to any GlideNova server.</p>
+
+    <h2>Data Sent to the AI</h2>
+    <p>When you start a coaching session, WorkCoach sends the following to Gemini (Google's AI) via a Cloudflare Worker proxy to generate your personalized coaching script:</p>
+    <ul>
+      <li>The task name you type into the session setup screen</li>
+      <li>Your selected coach persona (Intense, Calm, or Encouraging)</li>
+      <li>Your selected session length</li>
+    </ul>
+    <p>Only what you explicitly type is sent. No background data, no device identifiers, no location. The Cloudflare Worker acts as an intermediary — your request is routed through it, and the coaching script is returned to your device. GlideNova does not log or store these requests.</p>
+    <p>Gemini's own privacy policy applies to data processed by their API. You can review it at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+    <h2>Subscriptions and Payments</h2>
+    <p>WorkCoach offers an optional auto-renewing subscription ($6.99/month or $39.99/year) with a 7-day free trial. All subscription purchases are processed entirely by Apple through the App Store. GlideNova never sees, receives, or stores your payment information, card details, or billing address. For questions about charges or refunds, contact Apple Support.</p>
+
+    <h2>No Tracking, No Analytics, No Ads</h2>
+    <p>WorkCoach does not use any third-party analytics SDKs (no Firebase, no Mixpanel, no Amplitude). There are no advertisements in the app. We do not track your behavior across apps or websites. There is no advertising identifier (IDFA) usage.</p>
+
+    <h2>Data Retention</h2>
+    <p>Session data lives on your device until you delete the app. Deleting the app removes all locally stored data. There is no server-side account and therefore no data to request deletion of.</p>
+
+    <h2>Children</h2>
+    <p>WorkCoach is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we make material changes to this policy, we will update the effective date above. Continued use of the app after changes are posted constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email us at <a href="mailto:support@glidenova.app">support@glidenova.app</a>.</p>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-brand">A <strong>GlideNova</strong> app &mdash; <a href="https://glidenova.com" style="color:inherit;text-decoration:none;">glidenova.com</a></p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

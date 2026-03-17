@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>WorkCoach — Active Session</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html, body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen {
+      width: 390px;
+      height: 844px;
+      background: #0D0D1A;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Status bar */
+    .status-bar {
+      width: 100%;
+      height: 54px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0 24px 8px;
+    }
+    .status-time {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .status-icons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .status-icons svg { fill: #fff; }
+
+    /* Session header */
+    .session-header {
+      width: 100%;
+      padding: 12px 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .session-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.04em;
+    }
+    .session-task {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(91,79,232,0.9);
+      background: rgba(91,79,232,0.12);
+      border: 1px solid rgba(91,79,232,0.25);
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    /* Timer ring */
+    .timer-wrapper {
+      margin-top: 36px;
+      position: relative;
+      width: 220px;
+      height: 220px;
+    }
+    .timer-ring-bg {
+      fill: none;
+      stroke: rgba(91,79,232,0.12);
+      stroke-width: 8;
+    }
+    .timer-ring-fill {
+      fill: none;
+      stroke: url(#ringGrad);
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-dasharray: 565;
+      stroke-dashoffset: 176;
+      transform-origin: center;
+      transform: rotate(-90deg);
+      filter: drop-shadow(0 0 10px rgba(91,79,232,0.8));
+    }
+    .timer-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .timer-time {
+      font-size: 52px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .timer-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Waveform */
+    .waveform {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 24px;
+      height: 36px;
+    }
+    .waveform-bar {
+      width: 4px;
+      border-radius: 2px;
+      background: linear-gradient(to top, #5B4FE8, #7B72F0);
+      opacity: 0.9;
+    }
+    .waveform-bar:nth-child(1) { height: 16px; }
+    .waveform-bar:nth-child(2) { height: 28px; }
+    .waveform-bar:nth-child(3) { height: 36px; filter: drop-shadow(0 0 6px rgba(91,79,232,1)); }
+    .waveform-bar:nth-child(4) { height: 24px; }
+    .waveform-bar:nth-child(5) { height: 14px; }
+
+    /* Coach cue */
+    .coach-cue {
+      margin-top: 20px;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .cue-text {
+      font-size: 17px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+    }
+    .cue-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(123,114,240,0.9);
+      margin-bottom: 10px;
+    }
+    .cue-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #5B4FE8;
+      box-shadow: 0 0 6px rgba(91,79,232,1);
+    }
+
+    /* Progress bar */
+    .progress-section {
+      width: 100%;
+      padding: 20px 32px 0;
+    }
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .progress-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.04em;
+    }
+    .progress-bar-bg {
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      height: 4px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      width: 48%;
+      background: linear-gradient(to right, #5B4FE8, #7B72F0);
+      border-radius: 4px;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .ctrl-btn {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .ctrl-pause {
+      background: rgba(91,79,232,0.18);
+      border: 1.5px solid rgba(91,79,232,0.35);
+      box-shadow: 0 4px 16px rgba(91,79,232,0.25);
+    }
+    .ctrl-stop {
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.12);
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <svg width="17" height="12" viewBox="0 0 17 12"><rect x="0" y="3" width="3" height="9" rx="1" opacity="0.4"/><rect x="4.5" y="2" width="3" height="10" rx="1" opacity="0.6"/><rect x="9" y="0" width="3" height="12" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1" opacity="0.3"/></svg>
+              <svg width="25" height="12" viewBox="0 0 25 12"><rect x="0" y="1" width="22" height="10" rx="3" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/><rect x="1.5" y="2.5" width="16" height="7" rx="1.5" fill="white"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="rgba(255,255,255,0.4)"/></svg>
+            </div>
+          </div>
+
+          <div class="session-header">
+            <div class="session-label">FOCUS SESSION</div>
+            <div class="session-task">Quarterly Report</div>
+          </div>
+
+          <!-- Timer ring -->
+          <div class="timer-wrapper">
+            <svg width="220" height="220" viewBox="0 0 220 220">
+              <defs>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5B4FE8"/>
+                  <stop offset="100%" stop-color="#7B72F0"/>
+                </linearGradient>
+              </defs>
+              <circle class="timer-ring-bg" cx="110" cy="110" r="90"/>
+              <circle class="timer-ring-fill" cx="110" cy="110" r="90"/>
+            </svg>
+            <div class="timer-center">
+              <div class="timer-time">12:34</div>
+              <div class="timer-label">remaining</div>
+            </div>
+          </div>
+
+          <!-- Waveform -->
+          <div class="waveform">
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+          </div>
+
+          <!-- Coach cue -->
+          <div class="coach-cue">
+            <div class="cue-badge"><div class="cue-dot"></div>Coach</div>
+            <div class="cue-text">"Stay locked in — you're halfway there. Don't let up now."</div>
+          </div>
+
+          <!-- Progress -->
+          <div class="progress-section">
+            <div class="progress-meta">
+              <span class="progress-label">12 min in</span>
+              <span class="progress-label">48% complete</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="controls">
+            <div class="ctrl-btn ctrl-pause">&#9646;&#9646;</div>
+            <div class="ctrl-btn ctrl-stop">&#9632;</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

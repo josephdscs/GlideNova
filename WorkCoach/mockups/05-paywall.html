@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>WorkCoach — Paywall</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html, body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen {
+      width: 390px;
+      height: 844px;
+      background: #0D0D1A;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top glow */
+    .glow {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 360px;
+      height: 260px;
+      background: radial-gradient(ellipse at 50% 20%, rgba(91,79,232,0.3) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Status bar */
+    .status-bar {
+      height: 54px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0 24px 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .close-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 12px 24px 24px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Header */
+    .paywall-header {
+      text-align: center;
+    }
+    .paywall-icon {
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .paywall-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .paywall-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.5;
+    }
+
+    /* Benefits */
+    .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .benefit-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .benefit-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(91,79,232,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+    .benefit-text { flex: 1; }
+    .benefit-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .benefit-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.42);
+      margin-top: 1px;
+    }
+
+    /* Price options */
+    .price-options {
+      display: flex;
+      gap: 10px;
+    }
+    .price-card {
+      flex: 1;
+      background: #1A1A2E;
+      border: 1.5px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 14px 12px;
+      text-align: center;
+      position: relative;
+    }
+    .price-card.selected {
+      border-color: #5B4FE8;
+      background: rgba(91,79,232,0.14);
+    }
+    .save-badge {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #5B4FE8;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .price-period {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 6px;
+    }
+    .price-amount {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .price-amount span {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.45);
+    }
+    .price-trial {
+      font-size: 11px;
+      color: #7B72F0;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    /* CTA */
+    .cta-btn {
+      background: linear-gradient(135deg, #5B4FE8, #7B72F0);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+      box-shadow: 0 8px 24px rgba(91,79,232,0.45);
+    }
+    .restore-link {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.35);
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="glow"></div>
+          <div class="status-bar">
+            <div class="close-btn">&#x2715;</div>
+          </div>
+
+          <div class="content">
+            <div class="paywall-header">
+              <div class="paywall-icon">&#127908;</div>
+              <div class="paywall-title">Keep Your<br>Momentum</div>
+              <div class="paywall-sub">Unlock unlimited AI coaching sessions and stay in the zone.</div>
+            </div>
+
+            <div class="benefits">
+              <div class="benefit-row">
+                <div class="benefit-icon">&#129504;</div>
+                <div class="benefit-text">
+                  <div class="benefit-title">AI-Personalized Scripts</div>
+                  <div class="benefit-desc">Unique coaching script for every task, every session</div>
+                </div>
+              </div>
+              <div class="benefit-row">
+                <div class="benefit-icon">&#127775;</div>
+                <div class="benefit-text">
+                  <div class="benefit-title">All Three Coach Personas</div>
+                  <div class="benefit-desc">Switch between Intense, Calm, and Encouraging</div>
+                </div>
+              </div>
+              <div class="benefit-row">
+                <div class="benefit-icon">&#128200;</div>
+                <div class="benefit-text">
+                  <div class="benefit-title">Streaks and Session Debrief</div>
+                  <div class="benefit-desc">Track progress and get AI insights after every session</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price-options">
+              <div class="price-card">
+                <div class="price-period">Monthly</div>
+                <div class="price-amount">$6.99<span>/mo</span></div>
+                <div class="price-trial">7-day free trial</div>
+              </div>
+              <div class="price-card selected">
+                <div class="save-badge">Save 52%</div>
+                <div class="price-period">Annual</div>
+                <div class="price-amount">$39.99<span>/yr</span></div>
+                <div class="price-trial">7-day free trial</div>
+              </div>
+            </div>
+
+            <div class="cta-btn">Start 7-Day Free Trial</div>
+            <div class="restore-link">Restore Purchases</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>WorkCoach — Session Setup</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html, body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen {
+      width: 390px;
+      height: 844px;
+      background: #0D0D1A;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Status bar area */
+    .status-bar {
+      height: 54px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0 24px 8px;
+    }
+    .status-time {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .status-icons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .status-icons svg { fill: #fff; }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 8px 24px 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .page-title span {
+      color: #5B4FE8;
+    }
+
+    /* Task input */
+    .field-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 8px;
+    }
+    .task-input {
+      background: #1A1A2E;
+      border: 1.5px solid rgba(91,79,232,0.4);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .task-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 18px;
+      background: #5B4FE8;
+      vertical-align: middle;
+      margin-left: 1px;
+      border-radius: 1px;
+    }
+
+    /* Duration picker */
+    .duration-row {
+      display: flex;
+      gap: 10px;
+    }
+    .duration-btn {
+      flex: 1;
+      background: #1A1A2E;
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 12px 0;
+      text-align: center;
+      color: rgba(255,255,255,0.55);
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .duration-btn.selected {
+      background: rgba(91,79,232,0.18);
+      border-color: #5B4FE8;
+      color: #fff;
+    }
+
+    /* Persona cards */
+    .persona-row {
+      display: flex;
+      gap: 10px;
+    }
+    .persona-card {
+      flex: 1;
+      background: #1A1A2E;
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+    .persona-card.selected {
+      background: rgba(91,79,232,0.18);
+      border-color: #5B4FE8;
+    }
+    .persona-emoji {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+    .persona-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .persona-desc {
+      font-size: 10px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    /* Start button */
+    .start-btn {
+      background: linear-gradient(135deg, #5B4FE8, #7B72F0);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+      box-shadow: 0 8px 24px rgba(91,79,232,0.45);
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <svg width="17" height="12" viewBox="0 0 17 12"><rect x="0" y="3" width="3" height="9" rx="1" opacity="0.4"/><rect x="4.5" y="2" width="3" height="10" rx="1" opacity="0.6"/><rect x="9" y="0" width="3" height="12" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1" opacity="0.3"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 2.4C5.6 2.4 3.4 3.4 1.8 5L0 3.2C2.2 1.2 5 0 8 0s5.8 1.2 8 3.2L14.2 5C12.6 3.4 10.4 2.4 8 2.4z" opacity="0.4"/><path d="M8 5.6C6.4 5.6 5 6.2 3.8 7.2L2 5.4C3.6 4 5.7 3.2 8 3.2s4.4.8 6 2.2L12.2 7.2C11 6.2 9.6 5.6 8 5.6z" opacity="0.7"/><path d="M8 8.8c-1 0-2 .4-2.6 1L8 12l2.6-2.2C10 9.2 9 8.8 8 8.8z"/></svg>
+              <svg width="25" height="12" viewBox="0 0 25 12"><rect x="0" y="1" width="22" height="10" rx="3" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/><rect x="1.5" y="2.5" width="16" height="7" rx="1.5" fill="white"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="rgba(255,255,255,0.4)"/></svg>
+            </div>
+          </div>
+
+          <div class="content">
+            <div>
+              <div class="page-title">Let's <span>focus.</span></div>
+            </div>
+
+            <div>
+              <div class="field-label">What are you working on?</div>
+              <div class="task-input">
+                Quarterly Report<span class="task-cursor"></span>
+              </div>
+            </div>
+
+            <div>
+              <div class="field-label">Session Length</div>
+              <div class="duration-row">
+                <div class="duration-btn">15m</div>
+                <div class="duration-btn selected">25m</div>
+                <div class="duration-btn">45m</div>
+                <div class="duration-btn">60m</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="field-label">Coach Persona</div>
+              <div class="persona-row">
+                <div class="persona-card">
+                  <div class="persona-emoji">&#x26A1;</div>
+                  <div class="persona-name">Intense</div>
+                  <div class="persona-desc">Direct, pushes hard</div>
+                </div>
+                <div class="persona-card">
+                  <div class="persona-emoji">&#x1F9D8;</div>
+                  <div class="persona-name">Calm</div>
+                  <div class="persona-desc">Warm, grounding</div>
+                </div>
+                <div class="persona-card selected">
+                  <div class="persona-emoji">&#x1F31F;</div>
+                  <div class="persona-name">Encouraging</div>
+                  <div class="persona-desc">Upbeat, celebratory</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="start-btn">Start Session</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>
