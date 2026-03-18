@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>ThreeTasks — AI Prioritiser</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html, body { background: transparent; width: 390px; height: 844px; overflow: hidden; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif; -webkit-font-smoothing: antialiased; }
+    .screen { width: 390px; height: 844px; background: #0F0F14; display: flex; flex-direction: column; overflow: hidden; }
+    .status-bar { height: 54px; display: flex; align-items: flex-end; justify-content: space-between; padding: 0 24px 8px; }
+    .status-time { font-size: 15px; font-weight: 600; color: #fff; }
+    .status-icons { display: flex; gap: 6px; align-items: center; }
+    .status-icons svg { fill: #fff; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 0 20px 12px; }
+    .nav-title { font-size: 17px; font-weight: 700; color: #fff; }
+    .nav-close { font-size: 15px; color: rgba(255,255,255,0.45); font-weight: 500; }
+    .content { flex: 1; padding: 0 20px; overflow: hidden; display: flex; flex-direction: column; gap: 14px; }
+    .field-label { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
+    .dump-area { background: #1C1C26; border-radius: 12px; padding: 12px 14px; font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.5; height: 80px; overflow: hidden; }
+    .pick-btn { display: flex; align-items: center; justify-content: center; gap: 7px; background: #5B5EF4; border-radius: 14px; padding: 14px; color: #fff; font-size: 15px; font-weight: 700; }
+    .results-label { font-size: 15px; font-weight: 700; color: #fff; }
+    .suggestion { background: #1C1C26; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+    .suggestion-row { display: flex; align-items: flex-start; gap: 10px; }
+    .suggestion-num { width: 22px; height: 22px; border-radius: 50%; background: rgba(91,94,244,0.18); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #5B5EF4; flex-shrink: 0; }
+    .suggestion-task { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.3; }
+    .suggestion-reason { font-size: 12px; color: rgba(255,255,255,0.4); padding-left: 32px; }
+    .use-btn { display: flex; align-items: center; justify-content: center; background: rgba(91,94,244,0.15); border: 1.5px solid #5B5EF4; border-radius: 14px; padding: 13px; color: #5B5EF4; font-size: 15px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <svg width="25" height="12" viewBox="0 0 25 12"><rect x="0" y="1" width="22" height="10" rx="3" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/><rect x="1.5" y="2.5" width="16" height="7" rx="1.5" fill="white"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="rgba(255,255,255,0.4)"/></svg>
+            </div>
+          </div>
+          <div class="nav-bar">
+            <span class="nav-title">AI Prioritiser</span>
+            <span class="nav-close">Cancel</span>
+          </div>
+          <div class="content">
+            <div>
+              <div class="field-label">Your brain dump</div>
+              <div class="dump-area">Review Q1 proposal, prep standup slides, call dentist, send client invoice, fix checkout bug, update team on project status, book flights for conference, respond to PM's email about roadmap...</div>
+            </div>
+            <div class="pick-btn">✦ Pick My 3 Tasks</div>
+            <div class="results-label">AI Recommendations</div>
+            <div class="suggestion">
+              <div class="suggestion-row"><div class="suggestion-num">1</div><div class="suggestion-task">Prep slides for 2pm standup</div></div>
+              <div class="suggestion-reason">✦ Deadline-sensitive: standup is today at 2pm</div>
+            </div>
+            <div class="suggestion">
+              <div class="suggestion-row"><div class="suggestion-num">2</div><div class="suggestion-task">Send invoice to client</div></div>
+              <div class="suggestion-reason">✦ Revenue impact, overdue by 2 days</div>
+            </div>
+            <div class="suggestion">
+              <div class="suggestion-row"><div class="suggestion-num">3</div><div class="suggestion-task">Review Q1 proposal draft</div></div>
+              <div class="suggestion-reason">✦ High impact, requested by manager</div>
+            </div>
+            <div class="use-btn">Use These 3 Tasks</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

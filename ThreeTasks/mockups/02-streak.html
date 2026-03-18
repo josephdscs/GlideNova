@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390px, height=844px, initial-scale=1.0">
+  <title>ThreeTasks — Streak Complete</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html, body {
+      background: transparent;
+      width: 390px; height: 844px;
+      overflow: hidden; margin: 0; padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .screen { width: 390px; height: 844px; background: #0F0F14; display: flex; flex-direction: column; overflow: hidden; }
+    .status-bar { height: 54px; display: flex; align-items: flex-end; justify-content: space-between; padding: 0 24px 8px; }
+    .status-time { font-size: 15px; font-weight: 600; color: #fff; }
+    .status-icons { display: flex; gap: 6px; align-items: center; }
+    .status-icons svg { fill: #fff; }
+    .content { flex: 1; padding: 8px 20px 0; overflow: hidden; display: flex; flex-direction: column; gap: 18px; }
+    .header-row { display: flex; align-items: flex-start; justify-content: space-between; }
+    .header-left { display: flex; flex-direction: column; gap: 2px; }
+    .date-label { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 500; }
+    .page-title { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.03em; }
+    .streak-badge { display: flex; align-items: center; gap: 4px; background: #1C1C26; border-radius: 12px; padding: 8px 12px; }
+    .streak-num { font-size: 16px; font-weight: 800; color: #fff; }
+    .streak-unit { font-size: 11px; color: rgba(255,255,255,0.45); }
+    .banner {
+      background: rgba(91,94,244,0.12); border: 1px solid rgba(91,94,244,0.3);
+      border-radius: 12px; padding: 12px 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .banner-icon { font-size: 18px; }
+    .banner-text { font-size: 13px; font-weight: 600; color: #5B5EF4; }
+    .tasks { display: flex; flex-direction: column; gap: 10px; }
+    .task-card { display: flex; align-items: center; gap: 14px; background: #1C1C26; border-radius: 14px; padding: 14px 16px; }
+    .task-check { width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #5B5EF4; }
+    .task-check-mark { color: #fff; font-size: 13px; font-weight: 700; }
+    .task-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .task-num { font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .task-text { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.45); text-decoration: line-through; }
+    .ai-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: #5B5EF4; border-radius: 14px; padding: 15px; color: #fff; font-size: 15px; font-weight: 700; }
+    .tab-bar { height: 82px; background: #1C1C26; display: flex; align-items: flex-start; justify-content: space-around; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); flex-shrink: 0; }
+    .tab { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .tab-icon { font-size: 22px; opacity: .35; }
+    .tab-icon--active { opacity: 1; color: #5B5EF4; }
+    .tab-label { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.35); }
+    .tab-label--active { color: #5B5EF4; }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <svg width="17" height="12" viewBox="0 0 17 12"><rect x="0" y="3" width="3" height="9" rx="1" opacity="0.4"/><rect x="4.5" y="2" width="3" height="10" rx="1" opacity="0.6"/><rect x="9" y="0" width="3" height="12" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1" opacity="0.3"/></svg>
+              <svg width="25" height="12" viewBox="0 0 25 12"><rect x="0" y="1" width="22" height="10" rx="3" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/><rect x="1.5" y="2.5" width="16" height="7" rx="1.5" fill="white"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="rgba(255,255,255,0.4)"/></svg>
+            </div>
+          </div>
+          <div class="content">
+            <div class="header-row">
+              <div class="header-left">
+                <span class="date-label">Tuesday, March 18</span>
+                <span class="page-title">Today's 3 Tasks</span>
+              </div>
+              <div class="streak-badge">
+                <span style="font-size:16px;">🔥</span>
+                <span class="streak-num">12</span>
+                <span class="streak-unit">days</span>
+              </div>
+            </div>
+            <div class="banner">
+              <span class="banner-icon">🎉</span>
+              <span class="banner-text">Streak day earned! All 3 tasks complete.</span>
+            </div>
+            <div class="tasks">
+              <div class="task-card">
+                <div class="task-check"><span class="task-check-mark">✓</span></div>
+                <div class="task-info"><span class="task-num">Task 1</span><span class="task-text">Review Q1 proposal draft</span></div>
+              </div>
+              <div class="task-card">
+                <div class="task-check"><span class="task-check-mark">✓</span></div>
+                <div class="task-info"><span class="task-num">Task 2</span><span class="task-text">Prep slides for 2pm standup</span></div>
+              </div>
+              <div class="task-card">
+                <div class="task-check"><span class="task-check-mark">✓</span></div>
+                <div class="task-info"><span class="task-num">Task 3</span><span class="task-text">Send invoice to client</span></div>
+              </div>
+            </div>
+            <div class="ai-btn"><span>✦</span> AI Pick for Me</div>
+          </div>
+          <div class="tab-bar">
+            <div class="tab"><div class="tab-icon tab-icon--active">✓</div><span class="tab-label tab-label--active">Today</span></div>
+            <div class="tab"><div class="tab-icon">📅</div><span class="tab-label">History</span></div>
+            <div class="tab"><div class="tab-icon">⚙</div><span class="tab-label">Settings</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

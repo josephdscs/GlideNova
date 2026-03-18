@@ -1,0 +1,11 @@
+/* ThreeTasks — color overrides */
+:root {
+  --accent:     #5B5EF4;
+  --accent2:    #7B7FF8;
+  --bg:         #0F0F14;
+  --surface:    #1C1C26;
+  --surface2:   #252535;
+  --text:       #FFFFFF;
+  --text-muted: rgba(255,255,255,0.58);
+  --text-faint: rgba(255,255,255,0.26);
+}
