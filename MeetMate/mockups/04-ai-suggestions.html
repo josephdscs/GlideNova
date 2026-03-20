@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, height=844, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>MeetMate Mockup 04</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html { background: transparent; }
+    body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      color: #13213F;
+    }
+    .screen {
+      height: 100%;
+      background:
+        radial-gradient(circle at top left, rgba(47,107,255,0.16), transparent 38%),
+        linear-gradient(180deg, #F7FAFF 0%, #EEF4FF 48%, #F4F7FC 100%);
+      padding: 66px 18px 24px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+    .nav strong {
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+    .hero {
+      background: linear-gradient(135deg, #2F6BFF 0%, #6B92FF 100%);
+      color: #fff;
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: 0 22px 48px rgba(47,107,255,0.22);
+      margin-bottom: 14px;
+    }
+    .hero small {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.74;
+      margin-bottom: 8px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.84);
+    }
+    .panel {
+      background: #FFFFFF;
+      border-radius: 24px;
+      border: 1px solid rgba(19,33,63,0.07);
+      box-shadow: 0 18px 36px rgba(22,42,87,0.08);
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(19,33,63,0.46);
+      margin-bottom: 12px;
+    }
+    .prompt {
+      border-radius: 18px;
+      background: #F8FAFF;
+      border: 1px solid rgba(19,33,63,0.06);
+      padding: 14px;
+      font-size: 14px;
+      line-height: 1.45;
+      color: rgba(19,33,63,0.74);
+    }
+    .slot {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: #EEF4FF;
+      border-radius: 18px;
+      padding: 13px 14px;
+      margin-bottom: 10px;
+    }
+    .num {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      background: #2F6BFF;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+    .slot strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+    .slot span {
+      font-size: 12px;
+      color: rgba(19,33,63,0.58);
+    }
+    .share {
+      background: linear-gradient(135deg, #FFF3D8 0%, #FFE6A5 100%);
+      border-radius: 20px;
+      padding: 16px;
+      color: #584100;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="nav">
+            <span>Back</span>
+            <strong>AI Suggestions</strong>
+            <span></span>
+          </div>
+          <div class="hero">
+            <small>Premium</small>
+            <h1>Let AI suggest the smartest time slots</h1>
+            <p>Gemini turns plain-English constraints into ready-to-vote options and a polished invite message.</p>
+          </div>
+          <div class="panel">
+            <div class="label">Prompt</div>
+            <div class="prompt">next week after work for 45 minutes, avoid Friday, prioritize Alex and Sam</div>
+          </div>
+          <div class="panel">
+            <div class="label">Suggested slots</div>
+            <div class="slot">
+              <div class="num">1</div>
+              <div><strong>Tue, Mar 24 · 6:30 PM</strong><span>Best overlap across priority attendees</span></div>
+            </div>
+            <div class="slot">
+              <div class="num">2</div>
+              <div><strong>Wed, Mar 25 · 7:00 PM</strong><span>High attendance with fewer conflicts</span></div>
+            </div>
+            <div class="slot">
+              <div class="num">3</div>
+              <div><strong>Thu, Mar 26 · 6:15 PM</strong><span>Backup option for late replies</span></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="label">AI invite message</div>
+            <div class="share">Hey everyone, I pulled together a few options for our team lunch next week after work. Vote for the times that work best for you and we’ll lock the top slot today.</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

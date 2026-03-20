@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, height=844, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>MeetMate Mockup 05</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html { background: transparent; }
+    body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      color: #13213F;
+    }
+    .screen {
+      height: 100%;
+      background:
+        radial-gradient(circle at top center, rgba(47,107,255,0.18), transparent 28%),
+        linear-gradient(180deg, #F6F9FF 0%, #EEF4FF 44%, #F4F7FC 100%);
+      padding: 68px 22px 28px;
+    }
+    .close {
+      text-align: right;
+      font-size: 16px;
+      color: rgba(19,33,63,0.62);
+      margin-bottom: 10px;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .icon {
+      width: 84px;
+      height: 84px;
+      margin: 0 auto 16px;
+      border-radius: 28px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #2F6BFF 0%, #5A88FF 100%);
+      color: #fff;
+      font-size: 40px;
+      box-shadow: 0 22px 44px rgba(47,107,255,0.22);
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+    }
+    .hero p {
+      margin: 0 auto;
+      max-width: 290px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgba(19,33,63,0.64);
+    }
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      border: 1px solid rgba(19,33,63,0.07);
+      box-shadow: 0 18px 36px rgba(22,42,87,0.08);
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    .benefit {
+      display: flex;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 14px;
+    }
+    .benefit:last-child {
+      margin-bottom: 0;
+    }
+    .benefit .dot {
+      width: 26px;
+      height: 26px;
+      border-radius: 13px;
+      background: rgba(47,107,255,0.1);
+      color: #2F6BFF;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+    .benefit strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+    .benefit span {
+      font-size: 12px;
+      line-height: 1.45;
+      color: rgba(19,33,63,0.58);
+    }
+    .plan {
+      border-radius: 20px;
+      padding: 16px;
+      border: 1px solid rgba(19,33,63,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .plan.featured {
+      background: linear-gradient(135deg, rgba(47,107,255,0.08), rgba(90,136,255,0.12));
+      border-color: rgba(47,107,255,0.2);
+    }
+    .plan strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+    .plan span {
+      font-size: 12px;
+      color: rgba(19,33,63,0.58);
+    }
+    .price {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .button {
+      width: 100%;
+      display: block;
+      text-align: center;
+      background: #2F6BFF;
+      color: #fff;
+      padding: 16px 18px;
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 16px;
+      margin-top: 18px;
+    }
+    .foot {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.5;
+      color: rgba(19,33,63,0.46);
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="close">Close</div>
+          <div class="hero">
+            <div class="icon">✓</div>
+            <h1>Unlock unlimited polls and AI invites</h1>
+            <p>Create unlimited polls and unlock AI scheduling help when you actually need it.</p>
+          </div>
+          <div class="card">
+            <div class="benefit">
+              <div class="dot">∞</div>
+              <div><strong>Unlimited polls</strong><span>Create more than the 2 free polls and keep plans moving.</span></div>
+            </div>
+            <div class="benefit">
+              <div class="dot">AI</div>
+              <div><strong>AI Smart Suggestions</strong><span>Describe your constraints and get ready-to-vote time slots.</span></div>
+            </div>
+            <div class="benefit">
+              <div class="dot">✉</div>
+              <div><strong>AI-crafted invite message</strong><span>Share a cleaner, faster poll invite after every smart suggestion.</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="plan">
+              <div><strong>Monthly Premium</strong><span>Auto-renews monthly</span></div>
+              <div class="price">$4.99</div>
+            </div>
+            <div class="plan featured">
+              <div><strong>Annual Premium</strong><span>Best value</span></div>
+              <div class="price">$29.99</div>
+            </div>
+            <a class="button">Unlock Premium</a>
+            <div class="foot">Auto-renews until canceled. Cancel anytime in App Store settings.</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, height=844, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>MeetMate Mockup 03</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html { background: transparent; }
+    body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      color: #13213F;
+    }
+    .screen {
+      height: 100%;
+      background: linear-gradient(180deg, #F4F7FC 0%, #EFF5FF 100%);
+      padding: 66px 18px 26px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+    .nav strong {
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+    .panel {
+      background: #FFFFFF;
+      border-radius: 24px;
+      border: 1px solid rgba(19,33,63,0.07);
+      box-shadow: 0 18px 36px rgba(22,42,87,0.08);
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+    }
+    .sub {
+      font-size: 13px;
+      color: rgba(19,33,63,0.56);
+      margin-top: 5px;
+    }
+    .badge {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(47,107,255,0.1);
+      color: #2F6BFF;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(19,33,63,0.46);
+      margin-bottom: 12px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .heat {
+      position: relative;
+      height: 54px;
+      border-radius: 18px;
+      background: #EEF2F8;
+      overflow: hidden;
+    }
+    .fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      border-radius: 18px;
+      background: linear-gradient(90deg, #7FB0FF 0%, #2F6BFF 100%);
+    }
+    .fill.mid { width: 72%; }
+    .fill.soft { width: 54%; background: linear-gradient(90deg, #B9D2FF 0%, #6E9CFF 100%); }
+    .fill.best { width: 92%; background: linear-gradient(90deg, #FFCF72 0%, #FFB648 100%); }
+    .slot-copy {
+      position: relative;
+      z-index: 1;
+      padding: 11px 14px;
+    }
+    .slot-copy strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .slot-copy span {
+      font-size: 12px;
+      color: rgba(19,33,63,0.62);
+    }
+    .vote {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(19,33,63,0.56);
+    }
+    .button {
+      width: 100%;
+      display: block;
+      text-align: center;
+      background: #2F6BFF;
+      color: #fff;
+      padding: 15px 18px;
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .secondary {
+      width: 100%;
+      display: block;
+      text-align: center;
+      background: #E9EEF8;
+      color: #13213F;
+      padding: 15px 18px;
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="nav">
+            <span>Done</span>
+            <strong>Friday Dinner</strong>
+            <span></span>
+          </div>
+          <div class="panel">
+            <div class="top">
+              <div>
+                <strong>45 min meeting</strong>
+                <div class="sub">See everyone’s availability at a glance</div>
+              </div>
+              <div class="badge">Collecting votes</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="label">Availability</div>
+            <div class="row">
+              <div class="heat">
+                <div class="fill best"></div>
+                <div class="slot-copy">
+                  <strong>Wed, Mar 25 · 7:00 PM</strong>
+                  <span>Best consensus slot</span>
+                </div>
+              </div>
+              <div class="vote">6 votes</div>
+            </div>
+            <div class="row">
+              <div class="heat">
+                <div class="fill mid"></div>
+                <div class="slot-copy">
+                  <strong>Tue, Mar 24 · 6:30 PM</strong>
+                  <span>Strong backup option</span>
+                </div>
+              </div>
+              <div class="vote">4 votes</div>
+            </div>
+            <div class="row">
+              <div class="heat">
+                <div class="fill soft"></div>
+                <div class="slot-copy">
+                  <strong>Mon, Mar 23 · 6:00 PM</strong>
+                  <span>Works for fewer people</span>
+                </div>
+              </div>
+              <div class="vote">3 votes</div>
+            </div>
+          </div>
+          <a class="button">Lock Best Slot</a>
+          <a class="secondary">Share Results</a>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* MeetMate — color overrides + app-specific components */
+:root {
+  --accent: #2F6BFF;
+  --accent2: #5A88FF;
+  --bg: #F4F7FC;
+  --surface: #FFFFFF;
+  --surface2: #F9FBFF;
+  --text: #13213F;
+  --text-muted: rgba(19,33,63,0.68);
+  --text-faint: rgba(19,33,63,0.34);
+}
+
+nav {
+  background: rgba(244,247,252,0.9);
+  border-bottom-color: rgba(19,33,63,0.08);
+}
+
+.hero-eyebrow {
+  background: rgba(47,107,255,0.1);
+}
+
+.features,
+.pricing {
+  border-top-color: rgba(19,33,63,0.08);
+}
+
+.feature-card,
+.pricing-card {
+  border-color: rgba(19,33,63,0.08);
+  box-shadow: 0 18px 48px rgba(24,43,87,0.08);
+}
+
+.pricing-card.featured {
+  background: linear-gradient(135deg, #FFFFFF 0%, rgba(47,107,255,0.08) 100%);
+}
+
+footer {
+  border-top-color: rgba(19,33,63,0.08);
+}
