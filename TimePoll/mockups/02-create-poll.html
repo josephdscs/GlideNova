@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, height=844, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>TimePoll Mockup 02</title>
+  <link rel="stylesheet" href="../../_shared/device-frame.css">
+  <style>
+    html { background: transparent; }
+    body {
+      background: transparent;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      color: #13213F;
+    }
+    .screen {
+      height: 100%;
+      background: #F4F7FC;
+      padding: 66px 18px 24px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+    .nav strong {
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+    .action {
+      color: #2F6BFF;
+      font-weight: 700;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid rgba(19,33,63,0.07);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 16px 34px rgba(22,42,87,0.08);
+      margin-bottom: 14px;
+    }
+    .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(19,33,63,0.48);
+      margin-bottom: 10px;
+    }
+    .field {
+      border: 1px solid rgba(19,33,63,0.08);
+      border-radius: 18px;
+      padding: 14px 15px;
+      margin-bottom: 12px;
+      background: #FBFCFF;
+    }
+    .field strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .field span {
+      font-size: 13px;
+      color: rgba(19,33,63,0.58);
+    }
+    .pill-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #EEF4FF;
+      color: #2F6BFF;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .ai-card {
+      background: linear-gradient(135deg, rgba(47,107,255,0.1), rgba(90,136,255,0.14));
+      border-color: rgba(47,107,255,0.16);
+    }
+    .ai-input {
+      border-radius: 18px;
+      background: #fff;
+      padding: 14px;
+      font-size: 14px;
+      line-height: 1.45;
+      border: 1px solid rgba(19,33,63,0.06);
+      margin: 12px 0;
+      color: rgba(19,33,63,0.74);
+    }
+    .button {
+      display: inline-flex;
+      padding: 12px 16px;
+      border-radius: 16px;
+      background: #2F6BFF;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .slot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(19,33,63,0.06);
+      font-size: 14px;
+    }
+    .slot:last-child {
+      border-bottom: 0;
+    }
+    .plus {
+      width: 28px;
+      height: 28px;
+      border-radius: 14px;
+      background: rgba(47,107,255,0.1);
+      display: grid;
+      place-items: center;
+      color: #2F6BFF;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="device-root">
+    <div class="device-shell frame-shadow">
+      <div class="device-island"></div>
+      <div class="device-screen">
+        <div class="screen">
+          <div class="nav">
+            <span>Cancel</span>
+            <strong>New Poll</strong>
+            <span class="action">Create</span>
+          </div>
+          <div class="card">
+            <div class="label">Poll Details</div>
+            <div class="field">
+              <strong>Team lunch</strong>
+              <span>Title</span>
+            </div>
+            <div class="field">
+              <strong>45 min</strong>
+              <span>Duration</span>
+            </div>
+            <div class="field">
+              <strong>Joseph</strong>
+              <span>Your name</span>
+            </div>
+          </div>
+          <div class="card ai-card">
+            <div class="label">AI Smart Suggestions</div>
+            <div class="ai-input">next week after work for 45 minutes, avoid Friday, prioritize Alex and Sam</div>
+            <div class="button">Suggest Slots</div>
+          </div>
+          <div class="card">
+            <div class="label">Time Slots</div>
+            <div class="slot"><span>Mon, Mar 23 · 6:00 PM</span><span class="plus">−</span></div>
+            <div class="slot"><span>Tue, Mar 24 · 6:30 PM</span><span class="plus">−</span></div>
+            <div class="slot"><span>Wed, Mar 25 · 7:00 PM</span><span class="plus">−</span></div>
+            <div class="slot"><span>Add Time Slot</span><span class="plus">+</span></div>
+          </div>
+          <div class="pill-row">
+            <div class="pill">Create a poll and share it fast</div>
+          </div>
+        </div>
+      </div>
+      <div class="device-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>
