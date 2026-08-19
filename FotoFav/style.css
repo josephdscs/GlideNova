@@ -1,0 +1,11 @@
+/* FotoFav — color overrides */
+:root {
+  --accent:    #FF4D7D;
+  --accent2:   #3FB8C9;
+  --bg:        #121016;
+  --surface:   #1A1720;
+  --surface2:  #221E2A;
+  --text:      #FFFFFF;
+  --text-muted: rgba(255,255,255,0.58);
+  --text-faint: rgba(255,255,255,0.26);
+}
