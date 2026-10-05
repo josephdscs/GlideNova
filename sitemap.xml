@@ -125,4 +125,24 @@
     <lastmod>2026-09-08</lastmod>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://glidenova.com/NextPop/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/NextPop/privacy/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/NextPop/terms/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/NextPop/support/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>

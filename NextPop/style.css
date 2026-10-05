@@ -1,0 +1,40 @@
+/* NextPop — color overrides + app-specific components */
+:root {
+  --accent: #6C4BFF;
+  --accent2: #3FD8C8;
+  --bg: #0B0D14;
+  --surface: #151925;
+  --surface2: #1B2030;
+  --text: #F4F1EC;
+  --text-muted: rgba(244,241,236,0.7);
+  --text-faint: rgba(244,241,236,0.38);
+}
+
+nav {
+  background: rgba(11,13,20,0.88);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.hero-eyebrow {
+  background: rgba(108,75,255,0.18);
+}
+
+.features,
+.pricing {
+  border-top-color: rgba(255,255,255,0.08);
+}
+
+.feature-card,
+.pricing-card {
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.35);
+}
+
+.pricing-card.featured {
+  background: linear-gradient(135deg, #151925 0%, rgba(108,75,255,0.22) 100%);
+}
+
+
+footer {
+  border-top-color: rgba(255,255,255,0.08);
+}
