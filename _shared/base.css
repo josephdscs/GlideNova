@@ -483,3 +483,34 @@ footer {
   /* Legal */
   .legal-page { padding: 48px 16px; }
 }
+
+/* ─── FAQ ────────────────────────────────────────────────── */
+.faq {
+  padding: 80px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.faq .container { max-width: 760px; }
+.faq h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+.faq details {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 12px;
+}
+.faq summary {
+  font-weight: 700;
+  cursor: pointer;
+  list-style-position: outside;
+}
+.faq details p {
+  margin-top: 12px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
