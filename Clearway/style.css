@@ -3,7 +3,7 @@
   --accent: #14966E;
   --accent2: #3EE6B0;
   --bg: #0E1220;
-  --surface: #151925;
+  --surface: #161B2E;
   --surface2: #1B2030;
   --text: #F4F1EC;
   --text-muted: rgba(244,241,236,0.7);
@@ -31,7 +31,7 @@ nav {
 }
 
 .pricing-card.featured {
-  background: linear-gradient(135deg, #151925 0%, rgba(108,75,255,0.22) 100%);
+  background: linear-gradient(135deg, #161B2E 0%, rgba(108,75,255,0.22) 100%);
 }
 
 
