@@ -1,0 +1,15 @@
+/* Zancada — color overrides + app-specific components */
+:root {
+  --accent: #FF4F2E;
+  --accent2: #ED2B4A;
+}
+
+.hero-eyebrow {
+  background: rgba(255,79,46,0.12);
+}
+
+.lang-divider {
+  margin: 48px 0 32px;
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
