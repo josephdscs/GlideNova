@@ -1,0 +1,23 @@
+# GlideNova
+
+> GlideNova is an independent app studio run by Joseph De Santa Clara. It makes small, focused apps for iPhone, iPad and Mac. Most apps work without an account and keep data on the device. Support: contact@glidenova.com
+
+Each app has a landing page plus privacy, terms and support pages at glidenova.com/{App}/privacy/, /terms/ and /support/.
+
+## Apps on the App Store
+
+- [CalmAnchor](https://glidenova.com/CalmAnchor/): Panic attack and anxiety relief for iPhone and iPad. One-tap SOS protocol (breathing, grounding, reassurance) in under 2 minutes, six guided breathing techniques (box, 4-7-8, coherent, resonance), lessons, and an AI journal. Core tools are free, offline and need no account. Premium $4.99/month or $29.99/year. A wellness tool, not a medical device. App Store: https://apps.apple.com/us/app/calmanchor/id6760923111
+- [ParentScript](https://glidenova.com/ParentScript/): Exact, age-appropriate scripts for hard toddler moments (tantrums, hitting, not listening, bedtime, sharing, whining) for children aged 1 to 6. Free Tantrum Toolkit walks parents through a tantrum step by step; Ask AI gives tailored scripts. Premium $4.99/month or $29.99/year. App Store: https://apps.apple.com/us/app/parentscript/id6760925254
+- [Trifect](https://glidenova.com/Trifect/): A to-do list that allows exactly three tasks per day, based on the MIT (Most Important Tasks) method. Streaks, an AI Prioritiser that picks three tasks from a brain dump, and home and lock screen widgets. Free; Premium is a one-time $4.99 purchase. App Store: https://apps.apple.com/us/app/trifect/id6761146464
+- [FotoFav](https://glidenova.com/FotoFav/): Photo culling app for Mac. Open a folder, mark favorites with one click, copy them to a new folder. Supports JPEG, PNG, HEIC, GIF and TIFF. Free, no account, no network requests; originals are never moved. Mac App Store: https://apps.apple.com/us/app/fotofav/id6802853652?mt=12
+
+## Apps not yet on the App Store
+
+- [TimePoll](https://glidenova.com/TimePoll/): Group scheduling polls. Create a meeting poll, collect availability on a grid (participants vote on the web, no app needed), and lock the winning time.
+- [NextPop](https://glidenova.com/NextPop/): Number tap game. Tap 1, 2, 3 in order as fast as you can. Modes: Blitz, a shared Daily board, Memory and Zen. No ads, no account.
+- [WorkCoach](https://glidenova.com/WorkCoach/): Audio-coached focus sessions with AI-generated motivation for deep work.
+
+## Optional
+
+- [Full text of all app pages](https://glidenova.com/llms-full.txt)
+- [Sitemap](https://glidenova.com/sitemap.xml)

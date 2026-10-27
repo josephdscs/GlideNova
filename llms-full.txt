@@ -1,0 +1,429 @@
+# GlideNova — full site text
+
+> Plain-text copy of every app landing page on glidenova.com, for AI assistants and agents. Summary index: https://glidenova.com/llms.txt
+
+---
+
+# CalmAnchor
+
+Source: https://glidenova.com/CalmAnchor/
+App Store: https://apps.apple.com/us/app/calmanchor/id6760923111
+
+CalmAnchor — Panic Attack & Anxiety Relief App for iPhone
+
+Panic Attack Relief
+## Panic attack? One tap starts your recovery.
+Step-by-step breathing and grounding exercises that activate your body's calm response in under 2 minutes. Free to use, works offline, no account needed.
+
+### Everything you need, exactly when you need it.
+
+Features
+### Built for the moment panic hits — and every moment after.
+
+🆘
+#### SOS Panic Button
+One tap opens a structured protocol that walks you through breathing, grounding, and reassurance. Works in under 2 minutes.
+
+🫁
+#### Breathing Exercises
+Six guided techniques — box breathing, 4-7-8, coherent, resonance, and more — each with a real-time animated guide.
+
+✨
+#### AI Breathing Coach
+Tell the AI how anxious you feel on a 1–10 scale. It recommends the right technique for your current state.
+
+📖
+#### 8 Science-Backed Lessons
+Understand what panic attacks are, why your body reacts, how to identify triggers, and how to build long-term resilience.
+
+📝
+#### Panic Journal
+Log episodes, track intensity, and note what helped. Premium members get AI insights that identify patterns in their entries.
+
+🌧
+#### Sleep & Ambient Sounds
+Rain, ocean, forest, white noise, fireplace, and thunderstorm — designed to reduce background anxiety and improve sleep.
+
+ℹ
+CalmAnchor is a wellness tool, not a medical device. It does not diagnose, treat, or replace professional mental health care. If you are experiencing a mental health crisis, severe anxiety, or any medical emergency, please contact a qualified healthcare provider or call your local emergency services immediately.
+
+### Start free. Stay as long as you need.
+The SOS button, three breathing techniques, and three lessons are always free. No account required.
+
+Monthly
+$4.99/mo
+7-day free trial
+
+Best Value
+Annual
+$29.99/yr
+7-day free trial · ~$2.50/mo
+Subscriptions managed through Apple. Cancel anytime in your App Store account settings.
+Download Free
+
+### Questions about CalmAnchorIs CalmAnchor free?
+Yes. The SOS panic button, three breathing techniques and three lessons are always free, with no account required. Premium is $4.99/month or $29.99/year with a 7-day free trial.How does CalmAnchor help during a panic attack?
+One tap on the SOS button starts a structured protocol of breathing, grounding and reassurance that takes under 2 minutes.Which breathing exercises are included?
+Six guided techniques, including box breathing, 4-7-8, coherent and resonance breathing, each with a real-time animated guide.Does CalmAnchor work offline?
+Yes. The core panic relief tools work offline and need no account.Is CalmAnchor a replacement for therapy?
+No. CalmAnchor is a wellness tool, not a medical device. If you are in crisis, contact a qualified healthcare provider or your local emergency services.
+
+---
+
+# ParentScript
+
+Source: https://glidenova.com/ParentScript/
+App Store: https://apps.apple.com/us/app/parentscript/id6760925254
+
+ParentScript — Toddler Tantrum Scripts & Gentle Parenting App
+
+Gentle Parenting Scripts
+## The right words.
+Right now.
+When your toddler melts down and your mind goes blank — tap the situation, get the exact script. No theory. No guessing. Just the words.
+
+### Everything you need for every hard moment.
+
+Features
+### Built for the parent who already knows better — and needs the words.
+
+🆘
+#### Tantrum Toolkit — Always Free
+A 6-step real-time SOS guide for active meltdowns. Follow the steps while it's happening: regulate yourself first, get close, offer connection, move through it together. Never paywalled, ever.
+
+📚
+#### Script Library
+Browse by situation — hitting, not listening, public meltdown, bedtime refusal, sharing, whining, and more. Filter by your child's age. Each card shows what to say and what not to say, with a brief explanation of why.
+
+✨
+#### Ask AI
+Describe your specific situation in plain words. ParentScript's AI returns why this behavior is normal at your child's age, three exact scripts tailored to the moment, phrases that tend to backfire, and one preventive tip.
+
+🃏
+#### Daily Script Card
+A new "Say This, Not That" card every day, drawn from real situations. The format your brain recognizes instantly — wrong phrase, why it backfires, replacement scripts.
+
+🔖
+#### Saved Favorites
+Save the scripts that work for your child. Build a personal reference library of what actually resonates. Access your favorites instantly — no searching under pressure.
+
+🎯
+#### Age-Filtered Content
+Scripts calibrated for toddlers ages 1–6. What works for a 2-year-old is different from what works for a 5-year-old. Filter by your child's age and get language they can actually process.
+
+i
+ParentScript is a wellness tool, not a medical device. It does not diagnose, treat, or replace professional parenting guidance or mental health care. If you or your child are in crisis or need clinical support, please contact a qualified healthcare provider or call your local emergency services immediately.
+
+### Start free. Upgrade when you're ready.
+7-day free trial on all premium plans. Cancel anytime from iOS Settings.
+
+Monthly
+$4.99/mo
+7-day free trial
+Best Value — Save 50%
+Annual
+$29.99/yr
+7-day free trial
+Free tier includes: Tantrum Toolkit (always free), Script Library ages 1–4, 3 lookups, daily tip.
+Premium unlocks: unlimited lookups, ages 5–6 scripts, unlimited AI, saved favorites. Start Free Trial
+
+### Questions about ParentScriptWhat is ParentScript?
+An iPhone app with exact, age-appropriate scripts for hard toddler moments: tantrums, hitting, not listening, bedtime refusal, sharing, whining and more.What should I say to a toddler during a tantrum?
+ParentScript's free Tantrum Toolkit walks you through a 6-step guide in real time: regulate yourself first, get close, offer connection, then move through it together.What ages is ParentScript for?
+Children ages 1 to 6. Scripts can be filtered by your child's age.Is ParentScript free?
+The Tantrum Toolkit is always free, and the free tier includes the Script Library for ages 1–4. Premium is $4.99/month or $29.99/year with a 7-day free trial.How does Ask AI work?
+Describe your situation in plain words and get an explanation of why the behavior is normal at your child's age, three tailored scripts, phrases to avoid and one preventive tip.
+
+---
+
+# Trifect
+
+Source: https://glidenova.com/Trifect/
+App Store: https://apps.apple.com/us/app/trifect/id6761146464
+
+Trifect — 3 Tasks a Day To-Do List (MIT Method) for iPhone
+
+The MIT Method, Built In
+## Three tasks.
+That's the rule.
+Most people end the day having done a lot — and moved nothing forward. Trifect applies a single fix: pick exactly three tasks each morning and do those first. The constraint is the point.
+
+### Every decision made before your day starts.
+
+Three tasks. That's the rule.
+
+One streak, built daily.
+
+Paste everything. Pick three.
+
+See every day you showed up.
+
+Your three. Always in view.
+
+Features
+### The only task app that tells you no.
+
+✓
+#### Exactly 3 Tasks Per Day
+The app enforces a hard cap of three tasks. You cannot add a fourth. That rigidity forces a genuine decision about what matters — and that decision is what unlocks forward motion.
+
+🔥
+#### Daily Streak
+Complete all three tasks and you earn a streak day. The flame grows. The chain becomes something you protect. Simple mechanics, real habit.
+
+✨
+#### AI Prioritiser Premium
+Paste your brain dump — emails, notes, Notion, anything. AI reads the context, weighs urgency and deadlines, and returns exactly three picks with a one-line reason for each.
+
+◯
+#### Home Screen Widget Premium
+See today's three tasks on your home screen and lock screen without opening the app. Tap to mark complete right from the widget.
+
+📅
+#### Full Streak History Premium
+A GitHub-style activity heatmap of every day you completed your three tasks. The visual record makes it harder to break the chain.
+
+🔔
+#### Morning Reminder
+Optional daily notification to set your tasks before the day starts. The best decisions are made before the inbox opens.
+
+### One payment. Yours forever.
+No subscription. No recurring charges. Trifect is a one-time purchase.
+
+Free
+$0
+✓ 3 tasks per day (always)
+✓ Daily streak tracking
+✓ 7-day streak history
+✓ Morning reminder
+
+One-Time
+Premium
+$4.99 once
+✓ Everything in Free
+✓ AI Prioritiser
+✓ Home screen widget
+✓ Full streak heatmap
+✓ Yours forever — no subscription
+Get Trifect
+
+### Questions about TrifectWhat is the MIT (Most Important Tasks) method?
+You pick your three most important tasks each morning and do those first. Trifect builds this in with a hard limit of three tasks per day.Can I add more than three tasks?
+No. The three-task cap is the point: it forces a real decision about what matters today.Is Trifect a subscription?
+No. Trifect is free, and Premium is a one-time $4.99 purchase with no recurring charges.What does Premium include?
+The AI Prioritiser, which picks three tasks from a pasted brain dump, plus a home screen and lock screen widget and the full streak heatmap.
+
+---
+
+# FotoFav
+
+Source: https://glidenova.com/FotoFav/
+App Store: https://apps.apple.com/us/app/fotofav/id6802853652?mt=12
+
+FotoFav — Photo Culling App for Mac: Pick Favorites, Copy Them Out
+
+Photo Culling for Mac
+## Favorite your best shots. Copy them out. Done.
+Open a folder of photos, mark your favorites with a click, and copy them straight into a new folder. Fast, native, and entirely local — nothing ever leaves your Mac.
+
+### Everything you need, right in the grid.
+
+Features
+### Built for going through a folder of photos quickly.
+
+📁
+#### Open Any Folder
+Browse JPEG, PNG, HEIC, GIF, TIFF, and more in a clean, responsive thumbnail grid.
+
+❤️
+#### One-Click Favorites
+Click the heart on any photo, or press Space in the full-screen preview, to mark it as a favorite.
+
+🖼️
+#### Full-Screen Preview
+Click any photo to open it large, then scroll through the whole set with the arrow keys.
+
+🏷️
+#### Colored Categories
+Tag photos with your own colored categories and filter the grid down to just one at a time.
+
+📤
+#### Copy Favorites Out
+One click copies every favorite into a new folder — originals stay untouched, right where they are.
+
+🔒
+#### Fully Local
+No account, no cloud, no analytics. FotoFav never makes a network request — everything happens on your Mac.
+
+### Questions about FotoFavWhat does FotoFav do?
+FotoFav opens a folder of photos on your Mac, lets you mark favorites with one click, and copies every favorite into a new folder.Which image formats are supported?
+JPEG, PNG, HEIC, GIF, TIFF and more.Does FotoFav upload my photos?
+No. FotoFav has no account, no cloud and no analytics, and never makes a network request. Everything happens on your Mac.Are my original photos changed or moved?
+No. Favorites are copied into a new folder and the originals stay where they are.
+
+---
+
+# TimePoll
+
+Source: https://glidenova.com/TimePoll/
+Status (October 2026): not yet available on the App Store.
+
+TimePoll — Group Scheduling, Simplified
+
+Group Scheduling
+## Find the best time in seconds
+Stop guessing in the group chat. TimePoll helps friends, families, and small teams create a poll, compare everyone’s availability, and lock the winning slot fast.
+
+### Create, share, and confirm the winning slot without the scheduling spiral.
+
+Features
+### A lightweight mobile workflow for making plans that actually happen.
+
+🗓️
+#### Create Polls Fast
+Start a meeting poll in seconds with a title, meeting duration, and candidate time slots.
+
+📊
+#### See Availability Clearly
+Votes stack on a simple visual grid so the strongest option rises to the top without spreadsheet work.
+
+🏆
+#### Lock the Winner
+TimePoll scores every slot automatically so you can confirm the best time with one tap.
+
+✨
+#### AI Smart Suggestions
+Describe constraints like “next week after work, avoid Friday” and get recommended slots instantly.
+
+💬
+#### AI-Crafted Invite Message
+Premium polls can include a polished share message for iMessage or WhatsApp so you can send it right away.
+
+📱
+#### Free Tier That Proves Value
+Create up to two polls free, then upgrade only when you need unlimited polls or AI help.
+
+### Start free, upgrade when scheduling gets repetitive.
+TimePoll includes 2 free polls. Premium unlocks unlimited polls, AI Smart Suggestions, and AI-crafted invite messages.
+
+Monthly
+$4.99/mo
+No free trial
+
+Best Value
+Annual
+$29.99/yr
+Save over 45% vs monthly
+Subscriptions are billed and managed by Apple. Cancel anytime in iOS Settings > Apple ID > Subscriptions.
+Download Free
+
+---
+
+# NextPop
+
+Source: https://glidenova.com/NextPop/
+Status (October 2026): not yet available on the App Store.
+
+NextPop — Number Tap Game
+
+Number Tap Game
+## Find 1. Then 2. Then 3. How fast can you go?
+NextPop is a quick-fire number game for your reflexes, focus and memory. Pop the bubbles in order before the clock runs out, and come back every day for a new Daily board.
+
+### Four ways to play, thirty seconds at a time.
+
+Features
+### Simple to learn. Hard to put down.
+
+⚡
+#### Blitz
+30 seconds on the clock. Every pop brings in the next number, and fast streaks earn bonus time.
+
+📅
+#### Daily
+One board from 1 to 20, the same for everyone in the world. Keep your streak alive.
+
+👁️
+#### Memory
+Watch the bubbles light up in order, then repeat it. Three lives, longer every round.
+
+🍃
+#### Zen
+No clock, slow-drifting bubbles. Just you and the numbers.
+
+🏆
+#### Game Center
+Leaderboards for Blitz, Daily and Memory, plus a result card to share with friends.
+
+📱
+#### Made for every iPhone
+Liquid Glass on iOS 26, support back to iOS 17, VoiceOver and Reduce Motion support.
+
+### Free to play. One purchase for everything else.
+Blitz, Daily and Memory rounds 1–5 are free for everyone. Premium unlocks every past Daily, Zen mode, unlimited Memory, three exclusive themes and progress charts.
+
+Free
+$0
+Blitz, Daily, Memory 1–5, Game Center
+
+One-time
+Premium
+$2.99
+No subscription. No ads. Yours to keep.
+Purchases are processed by Apple and can be restored on any device with the same Apple ID.
+Download Free
+
+---
+
+# WorkCoach
+
+Source: https://glidenova.com/WorkCoach/
+Status (October 2026): not yet available on the App Store.
+
+WorkCoach — Your Personal Work Coach
+
+Audio Coaching for Deep Focus
+## Your Personal
+Work Coach.
+Audio-guided focus sessions powered by AI. Like Peloton, but for your brain. Stay locked in, push through, and finish what you started.
+
+### Focus sessions with a coach in your corner.
+
+Features
+### The motivation layer your focus app has always been missing.
+
+🎤
+#### Audio-Guided Sessions
+Select your task, pick a session length (15, 25, 45, or 60 minutes), choose your coach persona, and press start. Your coach delivers motivational prompts at timed intervals — acknowledging milestones, calling out failure points, and building toward the finish line.
+
+🧠
+#### AI-Personalized Scripts
+Powered by Gemini, every coaching script is generated fresh based on your exact task, chosen persona, and session length. Instead of generic affirmations, your coach references your actual work: "You're writing that report — halfway there, the hard part is over."
+
+🌟
+#### Three Coach Personas
+Intense (direct, pushes you hard), Calm (warm, keeps you grounded), or Encouraging (upbeat, celebrates wins). Choose the voice that resonates with you, or switch it up per session depending on the work.
+
+📈
+#### Session Stats and Streaks
+Track completed sessions, total focus hours, and your current streak. Build momentum through visible progress. The numbers don't lie — and neither does your coach.
+
+💬
+#### AI Session Debrief
+After each session, your coach generates a short insight on your performance and suggests a follow-up session type based on your patterns. Close every session with a clear picture of where you are.
+
+🎵
+#### Background Audio
+Coach audio plays over your background music — Spotify, Brain.fm, whatever you already use. WorkCoach ducks over your music rather than stopping it, so your focus environment stays intact.
+
+### Start free. Keep your momentum.
+7-day free trial on all premium plans. Cancel anytime from iOS Settings.
+
+Monthly
+$6.99/mo
+7-day free trial
+Best Value — Save 52%
+Annual
+$39.99/yr
+7-day free trial
+First session is always free. After that, premium unlocks unlimited AI-coached sessions, all three coach personas, session debrief, and streak tracking. Start Free Trial
