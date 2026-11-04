@@ -13,3 +13,12 @@
 .hero-eyebrow {
   background: rgba(255,107,74,0.14);
 }
+
+nav {
+  background: rgba(255,248,238,0.92);
+  border-bottom-color: rgba(42,34,51,0.08);
+}
+
+.nav-name {
+  color: var(--text);
+}
