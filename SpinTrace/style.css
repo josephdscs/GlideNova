@@ -1,0 +1,15 @@
+/* Spin Peek — color overrides + app-specific components */
+:root {
+  --accent: #D9482B;
+  --accent2: #FF6B4A;
+  --bg: #FFF8EE;
+  --surface: #FFFFFF;
+  --surface2: #FFF1E0;
+  --text: #2A2233;
+  --text-muted: rgba(42,34,51,0.72);
+  --text-faint: rgba(42,34,51,0.4);
+}
+
+.hero-eyebrow {
+  background: rgba(255,107,74,0.14);
+}

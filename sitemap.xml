@@ -165,4 +165,24 @@
     <lastmod>2026-10-18</lastmod>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://glidenova.com/SpinTrace/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/SpinTrace/privacy/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/SpinTrace/terms/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/SpinTrace/support/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>
