@@ -1,0 +1,159 @@
+/* Ternumi — color overrides + app-specific components */
+:root {
+  --accent: #E35A6B;
+  --accent2: #C94457;
+  --bg: #FBF4EE;
+  --surface: #FFFFFF;
+  --surface2: #F6E9DF;
+  --text: #2B1E2F;
+  --text-muted: rgba(43,30,47,0.68);
+  --text-faint: rgba(43,30,47,0.42);
+  --butter: #F6D77A;
+  --font: ui-rounded, 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+nav {
+  background: rgba(251,244,238,0.92);
+  border-bottom-color: rgba(43,30,47,0.08);
+}
+.nav-name { color: var(--text); }
+
+.hero-eyebrow { background: rgba(227,90,107,0.12); }
+
+.features,
+.pricing,
+.faq,
+footer {
+  border-top-color: rgba(43,30,47,0.08);
+}
+
+.feature-card,
+.pricing-card,
+.faq details,
+.contact-box {
+  border-color: rgba(43,30,47,0.08);
+  box-shadow: 0 10px 30px rgba(43,30,47,0.06);
+}
+.feature-card:hover { border-color: rgba(43,30,47,0.18); }
+
+.pricing-card.featured {
+  background: linear-gradient(135deg, #FFFFFF 0%, rgba(246,215,122,0.38) 100%);
+}
+.pricing-trial { color: var(--accent2); }
+
+.screenshot-flat img { box-shadow: 0 24px 64px rgba(43,30,47,0.18); }
+
+.faq-item { border-bottom-color: rgba(43,30,47,0.08); }
+
+/* ─── Hero note cards ────────────────────────────────────── */
+.hero-notes {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 auto 44px;
+  max-width: 520px;
+}
+.hero-note {
+  flex: 1 1 0;
+  max-width: 220px;
+  min-height: 150px;
+  border-radius: 22px;
+  padding: 18px 18px 14px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 36px rgba(43,30,47,0.12);
+  color: var(--text);
+}
+.hero-note.butter { background: var(--butter); transform: rotate(-2deg); }
+.hero-note.rose   { background: #F9CED3; transform: rotate(2deg); align-items: center; }
+.hero-note .note-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.hero-note .note-meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+.hero-note svg { width: 84px; height: 84px; }
+
+/* ─── How it works ───────────────────────────────────────── */
+.steps .feature-card { position: relative; padding-top: 30px; }
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* ─── Language switch ────────────────────────────────────── */
+.lang-switch {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.lang-switch button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+.lang-switch button[aria-pressed="true"] {
+  color: var(--text);
+  background: rgba(43,30,47,0.06);
+}
+
+/* ─── Legal pages: two languages ─────────────────────────── */
+.lang-divider {
+  margin: 48px 0 32px;
+  border: none;
+  border-top: 1px solid rgba(43,30,47,0.1);
+}
+.legal-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 8px;
+  font-size: 0.9rem;
+}
+.legal-page th,
+.legal-page td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 10px 10px 0;
+  border-bottom: 1px solid rgba(43,30,47,0.08);
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.legal-page th { color: var(--text); font-weight: 700; font-size: 0.85rem; }
+
+@media (max-width: 680px) {
+  .hero-notes { gap: 12px; max-width: 360px; }
+  .hero-note { min-height: 130px; padding: 14px 14px 12px; border-radius: 18px; }
+  .hero-note .note-text { font-size: 1rem; }
+  .hero-note svg { width: 64px; height: 64px; }
+  .legal-page table, .legal-page thead, .legal-page tbody, .legal-page tr, .legal-page th, .legal-page td { display: block; }
+  .legal-page thead { display: none; }
+  .legal-page td { border-bottom: none; padding: 4px 0; }
+  .legal-page td:first-child { color: var(--text); font-weight: 600; padding-top: 12px; }
+  .legal-page tr { border-bottom: 1px solid rgba(43,30,47,0.08); padding-bottom: 8px; }
+}

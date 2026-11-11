@@ -185,4 +185,24 @@
     <lastmod>2026-11-05</lastmod>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://glidenova.com/Ternumi/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/Ternumi/privacy/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/Ternumi/terms/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://glidenova.com/Ternumi/support/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>

@@ -16,6 +16,7 @@ Each app has a landing page plus privacy, terms and support pages at glidenova.c
 - [TimePoll](https://glidenova.com/TimePoll/): Group scheduling polls. Create a meeting poll, collect availability on a grid (participants vote on the web, no app needed), and lock the winning time.
 - [NextPop](https://glidenova.com/NextPop/): Number tap game. Tap 1, 2, 3 in order as fast as you can. Modes: Blitz, a shared Daily board, Memory and Zen. No ads, no account.
 - [WorkCoach](https://glidenova.com/WorkCoach/): Audio-coached focus sessions with AI-generated motivation for deep work.
+- [Ternumi](https://glidenova.com/Ternumi/): Widget for couples. Partners send short notes and doodles that appear on each other's home and lock screen widget, plus one daily question for two. Sign in with Apple (first name only), 6-digit pairing code, data stored in the EU, no ads. Each person gets 3 free sends; Ternumi Plus subscription ($3.99/month or $19.99/year) covers both partners.
 
 ## Optional
 
